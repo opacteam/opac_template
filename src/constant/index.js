@@ -1,6 +1,7 @@
 export const TEMPLATE = {
     baseURL: "",
-    logo: "",
+    siteName: "M2A Template",
+    logo: "https://4m4you.com/wp-content/uploads/2020/06/logo-placeholder.png",
     pages: {
         home: {
 

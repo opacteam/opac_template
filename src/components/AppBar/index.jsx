@@ -1,17 +1,61 @@
+import React, { useEffect, useState } from 'react';
 import { useTheme } from "@mui/material/styles";
-import { useMediaQuery } from "@mui/material";
-
-import AppbarMobile from "./AppBarMobile";
-import AppbarDesktop from "./AppbarDesktop";
+import { AppBar, Container, useMediaQuery, Box, Button, Typography } from "@mui/material";
+import { AppbarContainer, AppbarLogo, AppbarLogoBox, AppbarRoot } from "./AppBar.style";
 import { TEMPLATE } from '../../constant';
 
 const Appbar = () => {
-    const AppbarConstant = TEMPLATE.components.AppBar
+    const [isScroll, setIsScroll] = useState(false)
+    const AppbarConstant = TEMPLATE.components.AppBar;
     const theme = useTheme();
+
+    /**
+     * A boolean indicates viewport, 
+     * return true if meets the condition
+     */
     const matches = useMediaQuery(theme.breakpoints.down('md'));
+
+    const pages = AppbarConstant.AppBarLinks;
+    const { logo, siteName, baseURL } = TEMPLATE;
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrolled = window.scrollY > 310
+            if (scrolled) {
+                setIsScroll(true)
+            } else {
+                setIsScroll(false)
+            }
+        }
+        document.addEventListener('scroll', handleScroll)
+        return () => {
+            document.removeEventListener('scroll', handleScroll)
+        }
+    }, [])
+
+
     return (
         <>
-            {matches ? <AppbarMobile matches={matches} /> : <AppbarDesktop links={AppbarConstant.AppBarLinks} matches={matches} />}
+            <AppbarRoot position="fixed" className="header" isScroll={isScroll}>
+                <AppbarContainer >
+
+
+                    <AppbarLogoBox onClick={_ => window.location = baseURL} >
+                        <AppbarLogo component="img" src={logo} alt={`${siteName} logo`}></AppbarLogo>
+                    </AppbarLogoBox>
+
+                    <Box sx={{ display: { xs: 'none', md: 'flex' } }} >
+                        {pages.map((page, i) => (
+                            <Button
+                                key={`${page}-${i}`}
+
+                                sx={{ my: 2, color: 'white', display: 'block' }}
+                            >
+                                {page.title}
+                            </Button>
+                        ))}
+                    </Box>
+                </AppbarContainer>
+            </AppbarRoot>
         </>
     );
 }
