@@ -9,26 +9,30 @@ import { ThemeProvider } from "@mui/material/styles";
 import { useSelector, } from 'react-redux';
 
 import Counter from './components/Counter';
+import Layout from './Layout';
 function App() {
     const theme = useSelector((state) => state.theme)
     return (
 
         <div className="App">
-            <Counter />
+           
 
             <ThemeProvider theme={theme.darkTheme ? darkTheme : lightTheme}>
                 <CssBaseline enableColorScheme />
-                <Router>
-                    <Suspense fallback={<Loading />}>
-                        <Routes>
-                            {ROUTES.map(({ path, Component }, i) => (
-                                <Route key={i} path={path} element={<Component />} />
-                            ))}
-                        </Routes>
-                    </Suspense>
-                </Router>
+                <Layout>
+                    <Router>
+                        <Suspense fallback={<Loading />}>
+                            <Routes>
+                                {ROUTES.map(({ path, Component }, i) => (
+                                    <Route key={i} path={path} element={<Component />} />
+                                ))}
+                            </Routes>
+                        </Suspense>
+                    </Router>
+                </Layout>
             </ThemeProvider>
         </div>
+        
 
     );
 }
