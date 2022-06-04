@@ -19,14 +19,17 @@ const Appbar = () => {
     const { logo, siteName, baseURL } = TEMPLATE;
     useEffect(() => {
         const handleScroll = () => {
-            const scrolled = window.scrollY > 310
+            console.log(window.scrollY)
+            const scrolled = window.scrollY > 80
+            console.log(scrolled)
             if (scrolled) {
                 setIsScroll(true)
             } else {
                 setIsScroll(false)
             }
         }
-        document.addEventListener('scroll', handleScroll)
+        document.addEventListener('scroll', handleScroll);
+   
         return () => {
             document.removeEventListener('scroll', handleScroll)
         }
@@ -35,10 +38,8 @@ const Appbar = () => {
 
     return (
         <>
-            <AppbarRoot position="fixed" className="header" isScroll={isScroll}>
+            <AppbarRoot position="fixed" className="header" scroll={isScroll} >
                 <AppbarContainer >
-
-
                     <AppbarLogoBox onClick={_ => window.location = baseURL} >
                         <AppbarLogo component="img" src={logo} alt={`${siteName} logo`}></AppbarLogo>
                     </AppbarLogoBox>
@@ -47,7 +48,6 @@ const Appbar = () => {
                         {pages.map((page, i) => (
                             <Button
                                 key={`${page}-${i}`}
-
                                 sx={{ my: 2, color: 'white', display: 'block' }}
                             >
                                 {page.title}

@@ -1,18 +1,16 @@
 import Footer from "../components/Footer"
-import Header from "../components/AppBar"
+import AppBar from "../components/AppBar"
 import { Box } from "@mui/material";
+import { LayoutMainBox } from "./Layout.style";
 
 const Layout = ({ children }) => {
     return (
         <>
-            <Header />
+            <AppBar />
 
-            <Box sx={{
-                display: 'flex',
-                minHeight: '100vh',
-            }} className="layout-main">
-                {children}
-            </Box>
+
+
+            <LayoutMainBox>{children}</LayoutMainBox>
             <Footer />
         </>
     )
