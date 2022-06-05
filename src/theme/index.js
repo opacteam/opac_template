@@ -11,7 +11,13 @@ export const lightTheme = createTheme({
         },
     },
     typography: {
-        fontSize: 16,
+        fontSize: 12,
+        h1: {
+            fontSize: "4.5rem",
+        },
+        h2: {
+            fontSize: "2.5rem",
+        },
         h3: {
             fontWeight: 700,
             fontSize: "2.2rem",

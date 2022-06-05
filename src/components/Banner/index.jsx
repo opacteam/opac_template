@@ -1,14 +1,29 @@
 
 import React from 'react';
 import { TEMPLATE } from '../../constant';
-import { BannerContainer, BannerBox, ShadowLayerBox, BannerContent } from './Banner.style';
-
+import { BannerContainer, BannerBox, ShadowLayerBox, BannerContent, SearchBar, InputSearch, SubmitSearch } from './Banner.style';
+import { Typography, Button } from '@mui/material';
+import { useSelector } from 'react-redux/';
 const Banner = () => {
-    const { banner, heading } = TEMPLATE;
+    const TEMPLATE = useSelector((state) => state.template);
+    const { banner, heading, description } = TEMPLATE;
     return (
         <BannerContainer maxWidth="false" className="bannerContainer">
             <BannerBox banner={banner}></BannerBox>
-            <BannerContent><h1>{heading}</h1></BannerContent>
+            <BannerContent>
+                <Typography variant="h1" style={{ fontSize: '50px' }}  >
+                    {heading}
+                </Typography>
+                {/*
+                <Typography variant="h2"  >
+                    {description}
+                </Typography> */}
+                <SearchBar>
+                    <InputSearch placeholder='Enter your keyword' />
+                    <SubmitSearch variant="contained">Search</SubmitSearch>
+                </SearchBar>
+
+            </BannerContent>
             <ShadowLayerBox />
         </BannerContainer>
     )

@@ -3,9 +3,9 @@
 
 import React from 'react'
 import { Typography, Link, Box, Container } from '@mui/material'
-import { TEMPLATE } from '../../constant';
+import { useSelector } from 'react-redux';
 export const Copyright = () => {
-
+    const TEMPLATE = useSelector((state) => state.template);
     return (
         <Typography variant="body2" color="text.secondary">
             {'Copyright © '}

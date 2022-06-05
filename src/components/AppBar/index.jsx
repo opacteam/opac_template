@@ -1,25 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { useTheme } from "@mui/material/styles";
-import { AppBar, Container, useMediaQuery, Box, Button, Typography } from "@mui/material";
+import { Box, Button, } from "@mui/material";
 import { AppbarContainer, AppbarLogo, AppbarLogoBox, AppbarRoot } from "./AppBar.style";
-import { TEMPLATE } from '../../constant';
+
+import { useSelector } from 'react-redux';
 
 const Appbar = () => {
+    const TEMPLATE = useSelector((state) => state.template);
     const [isScroll, setIsScroll] = useState(false)
     const AppbarConstant = TEMPLATE.components.AppBar;
     const theme = useTheme();
-
-    /**
-     * A boolean indicates viewport, 
-     * return true if meets the condition
-     */
-    const matches = useMediaQuery(theme.breakpoints.down('md'));
 
     const pages = AppbarConstant.AppBarLinks;
     const { logo, siteName, baseURL } = TEMPLATE;
     useEffect(() => {
         const handleScroll = () => {
-            console.log(window.scrollY)
+
             const scrolled = window.scrollY > 80
             console.log(scrolled)
             if (scrolled) {
@@ -29,7 +25,7 @@ const Appbar = () => {
             }
         }
         document.addEventListener('scroll', handleScroll);
-   
+
         return () => {
             document.removeEventListener('scroll', handleScroll)
         }
