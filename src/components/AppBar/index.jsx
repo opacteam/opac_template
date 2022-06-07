@@ -7,7 +7,8 @@ import { useSelector } from 'react-redux';
 
 const Appbar = () => {
     const TEMPLATE = useSelector((state) => state.template);
-    const [isScroll, setIsScroll] = useState(false)
+    const [isScroll, setIsScroll] = useState(false);
+    const [isClicked, setIsClicked] = useState(false)
     const AppbarConstant = TEMPLATE.components.AppBar;
     const theme = useTheme();
 
@@ -15,9 +16,8 @@ const Appbar = () => {
     const { logo, siteName, baseURL } = TEMPLATE;
     useEffect(() => {
         const handleScroll = () => {
-
             const scrolled = window.scrollY > 80
-            console.log(scrolled)
+            
             if (scrolled) {
                 setIsScroll(true)
             } else {
@@ -25,7 +25,6 @@ const Appbar = () => {
             }
         }
         document.addEventListener('scroll', handleScroll);
-
         return () => {
             document.removeEventListener('scroll', handleScroll)
         }
@@ -50,6 +49,13 @@ const Appbar = () => {
                             </Button>
                         ))}
                     </Box>
+
+                    <Box sx={{ display: { xs: 'flex', md: 'none' } }} style={{ alignItems: 'center' }}>
+                        <div id="nav-icon4" className={isClicked ? 'open' : ''} onClick={_ => setIsClicked(!isClicked)}>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div></Box>
                 </AppbarContainer>
             </AppbarRoot>
         </>
