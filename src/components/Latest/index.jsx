@@ -1,38 +1,43 @@
-import React from 'react'
-import { LatestBox, LatestContainer } from './Latest.style'
+import React from "react";
+import { LatestBox, LatestContainer, LatestCarousel } from "./Latest.style";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from "swiper";
-// Import Swiper styles
-import 'swiper/css';
 
+import { Paper, Button } from "@mui/material";
 
-const Latest = props => {
+const Latest = (props) => {
+  var items = [
+    {
+      name: "Random Name #1",
+      description: "Probably the most random thing you have ever seen!",
+    },
+    {
+      name: "Random Name #2",
+      description: "Hello World!",
+    },
+  ];
+
   return (
-    <LatestContainer maxWidth="false"  >
+    <LatestContainer maxWidth="false">
       <LatestBox>
-        <Swiper
-          pagination={{
-            type: "progressbar",
-          }}
-          navigation={true}
-          modules={[Pagination, Navigation]}
-          className="mySwiper"
-        >
-          <SwiperSlide>Slide 1</SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          <SwiperSlide>Slide 5</SwiperSlide>
-          <SwiperSlide>Slide 6</SwiperSlide>
-          <SwiperSlide>Slide 7</SwiperSlide>
-          <SwiperSlide>Slide 8</SwiperSlide>
-          <SwiperSlide>Slide 9</SwiperSlide>
-        </Swiper>
+        <LatestCarousel height="100%">
+          {items.map((item, i) => (
+            <Item key={i} item={item} />
+          ))}
+        </LatestCarousel>
       </LatestBox>
     </LatestContainer>
-  )
+  );
+};
+
+function Item(props) {
+  return (
+    <Paper style={{height: '100%', backgroundColor:'red'}}>
+      <h2>{props.item.name}</h2>
+      <p>{props.item.description}</p>
+
+      <Button className="CheckButton">Check it out!</Button>
+    </Paper>
+  );
 }
 
-
-export default Latest
+export default Latest;

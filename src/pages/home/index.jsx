@@ -16,7 +16,7 @@ const Home = () => {
     return (
         <>
             <Banner />
-            {/* <Latest /> */}
+            <Latest />
             <ExploreCollection />
             <Fab
 

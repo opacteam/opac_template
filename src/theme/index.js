@@ -66,7 +66,7 @@ export const darkTheme = createTheme({
     palette: {
         mode: 'dark',
         primary: {
-            main: Colors.dark,
+            main: Colors.primary,
         },
         secondary: {
             main: Colors.danger,
