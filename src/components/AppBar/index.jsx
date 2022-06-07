@@ -17,7 +17,7 @@ const Appbar = () => {
     useEffect(() => {
         const handleScroll = () => {
             const scrolled = window.scrollY > 80
-            
+
             if (scrolled) {
                 setIsScroll(true)
             } else {
