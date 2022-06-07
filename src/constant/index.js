@@ -35,13 +35,14 @@ export const templateSlice = createSlice({
     name: 'template',
     initialState: TEMPLATE,
     reducers: {
-        changeBanner: (state, banner) => {
-            state.banner = banner;
-        },
+        setBanner: (state, banner) => ({...state, banner: banner }),
+
+        setHeading: (state, heading) => ({...state, heading: heading.payload }),
+
     }
 })
 
 
-
+export const { setBanner, setHeading } = templateSlice.actions;
 
 export default templateSlice.reducer;

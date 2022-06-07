@@ -4,6 +4,7 @@ import { styled } from "@mui/material/styles";
 export const AppbarRoot = styled(AppBar)(({ scroll, theme }) => ({
     backgroundColor: !scroll ? 'transparent' : theme.palette.primary.main,
     boxShadow: 'none',
+   
     transition: 'all 300ms ease-out'
 }))
 export const AppbarContainer = styled(Container)(() => ({

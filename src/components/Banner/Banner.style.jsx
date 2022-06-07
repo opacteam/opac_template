@@ -1,6 +1,9 @@
 import { autocompleteClasses, Box, Button, Container } from "@mui/material";
 import styled from "@emotion/styled";
-import { alpha } from '@mui/material/styles';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
 const BANNER_HEIGHT = '600px';
 export const BannerContainer = styled(Container)(_ => ({
     padding: '0 !important',
@@ -17,7 +20,8 @@ export const BannerBox = styled(Box)(({ banner }) => ({
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    zIndex: '-2'
+    zIndex: '-2',
+    
 }));
 
 export const ShadowLayerBox = styled(Box)(_ => ({
@@ -31,6 +35,7 @@ export const ShadowLayerBox = styled(Box)(_ => ({
 }))
 
 export const BannerContent = styled(Box)(_ => ({
+  
     position: 'absolute',
     textAlign: 'center',
     top: '100px',
