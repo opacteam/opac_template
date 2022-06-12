@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useTheme } from "@mui/material/styles";
-import { Box, Button, } from "@mui/material";
+import { Box, Button, Divider, } from "@mui/material";
 import { AppbarContainer, AppbarLogo, AppbarLogoBox, AppbarRoot } from "./AppBar.style";
 
 import { useSelector } from 'react-redux';
@@ -35,19 +35,21 @@ const Appbar = () => {
     return (
         <>
             <AppbarRoot position="fixed" className="header" scroll={isScroll} >
-                <AppbarContainer maxWidth={true}  >
+                <AppbarContainer >
                     <AppbarLogoBox onClick={_ => window.location = baseURL} >
                         <AppbarLogo component="img" src={logo} alt={`${siteName} logo`}></AppbarLogo>
                     </AppbarLogoBox>
 
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }} >
                         {pages.map((page, i) => (
-                            <Button
-                                key={`${page}-${i}`}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
-                            >
-                                {t(page.title)}
-                            </Button>
+                            <>
+                                <Button
+                                    key={`${page}-${i}`}
+                                    sx={{ my: 2, color: !isScroll ? 'white' : 'black', display: 'block' }}
+                                >
+                                    {t(page.title)}
+                                </Button>
+                            </>
                         ))}
                     </Box>
 

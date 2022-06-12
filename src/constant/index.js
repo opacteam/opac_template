@@ -9,7 +9,17 @@ export const TEMPLATE = {
     description: "description",
     pages: {
         home: {
-
+            latest: {
+                heading: "latestHeading",
+                description: "latestDescription",
+                items: [{
+                    thummnail: "https://upload.wikimedia.org/wikipedia/commons/7/72/NYC_-_New_York_City_Library_-_1723.jpg",
+                    title: "Library"
+                }, {
+                    thummnail: "https://static01.nyt.com/images/2022/01/16/fashion/VIRAL-LIBRARY/VIRAL-LIBRARY-videoSixteenByNineJumbo1600.jpg",
+                    title: "Books"
+                }, ]
+            }
         },
         summary: {},
         detail: {},
@@ -44,5 +54,7 @@ export const templateSlice = createSlice({
 
 
 export const { setBanner, setHeading } = templateSlice.actions;
+
+
 
 export default templateSlice.reducer;

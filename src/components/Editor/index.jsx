@@ -13,23 +13,15 @@ const Editor = () => {
         <React.Fragment >
             <Drawer
                 anchor='right'
-
                 open={open}
-                onClose={_ => dispatch(toggle())}
-            >
+                onClose={_ => dispatch(toggle())}>
                 <Box
-
                     sx={{
                         '& > :not(style)': { m: 1, width: '25ch' },
-                    }}
-
-
-                >
+                    }}>
                     <TextField label="Site Name"
                         defaultValue={useSelector(state => state.template.heading)}
                         variant="standard" onChange={e => dispatch(setHeading(e.target.value))} />
-
-
                 </Box>
                 <Box>
                     <FormGroup>
@@ -38,8 +30,6 @@ const Editor = () => {
                             label="Switch theme"
                         />
                     </FormGroup>
-
-
                 </Box>
                 <Box>
                     <FormGroup>
@@ -48,8 +38,6 @@ const Editor = () => {
                             label="Switch Language"
                         />
                     </FormGroup>
-
-
                 </Box>
             </Drawer>
         </React.Fragment>

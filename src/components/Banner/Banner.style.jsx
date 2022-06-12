@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 
 const BANNER_HEIGHT = '80vh';
 export const BannerContainer = styled(Container)(({ theme, banner }) => ({
-    padding: '150px 20px',
+    padding: '150px 0px',
     height: BANNER_HEIGHT,
     position: 'relative',
     backgroundImage: `url('${banner}')`,
@@ -11,10 +11,7 @@ export const BannerContainer = styled(Container)(({ theme, banner }) => ({
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     maxHeight: '800px',
-    [theme.breakpoints.down('md')]: {
-        padding: '200px 20px',
 
-    },
     filter: 'brightness(100%)',
     color: 'white',
     textAlign: "left"
