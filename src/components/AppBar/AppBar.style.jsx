@@ -4,7 +4,7 @@ import { styled } from "@mui/material/styles";
 export const AppbarRoot = styled(AppBar)(({ scroll, theme }) => ({
     backgroundColor: !scroll ? 'transparent' : theme.palette.primary.main,
     boxShadow: 'none',
-    width:'100vw',
+    width: '100vw',
     transition: 'all 300ms ease-out'
 }))
 export const AppbarContainer = styled(Container)(() => ({
@@ -12,6 +12,9 @@ export const AppbarContainer = styled(Container)(() => ({
     width: '100%',
     justifyContent: 'space-between',
     height: '60px',
+    marginLeft: '20px',
+    marginRight: '20px'
+
 
 }));
 

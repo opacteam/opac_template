@@ -35,7 +35,7 @@ const Appbar = () => {
     return (
         <>
             <AppbarRoot position="fixed" className="header" scroll={isScroll} >
-                <AppbarContainer >
+                <AppbarContainer maxWidth={true}  >
                     <AppbarLogoBox onClick={_ => window.location = baseURL} >
                         <AppbarLogo component="img" src={logo} alt={`${siteName} logo`}></AppbarLogo>
                     </AppbarLogoBox>
@@ -46,7 +46,7 @@ const Appbar = () => {
                                 key={`${page}-${i}`}
                                 sx={{ my: 2, color: 'white', display: 'block' }}
                             >
-                              {t(page.title)}
+                                {t(page.title)}
                             </Button>
                         ))}
                     </Box>
