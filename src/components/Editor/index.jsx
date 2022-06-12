@@ -1,10 +1,11 @@
 import React from 'react'
-import { Button, Drawer, Box, TextField, FormGroup, FormControlLabel } from '@mui/material';
+import { Button, Drawer, Box, TextField, FormGroup, FormControlLabel, Switch } from '@mui/material';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggle } from './editorSlice';
 import { toggleTheme } from '../../theme/themeSlice';
 import { setHeading } from '../../constant';
 import { MaterialUISwitch } from './Editor.style';
+import { toggleLanguage } from '../../i18n/languageSlice';
 const Editor = () => {
     const open = useSelector((state) => state.editor.open);
     const dispatch = useDispatch();
@@ -35,6 +36,16 @@ const Editor = () => {
                         <FormControlLabel onChange={_ => dispatch(toggleTheme())}
                             control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
                             label="Switch theme"
+                        />
+                    </FormGroup>
+
+
+                </Box>
+                <Box>
+                    <FormGroup>
+                        <FormControlLabel onChange={_ => dispatch(toggleLanguage())}
+                            control={<Switch sx={{ m: 1 }} defaultChecked />}
+                            label="Switch Language"
                         />
                     </FormGroup>
 

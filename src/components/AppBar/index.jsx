@@ -4,13 +4,14 @@ import { Box, Button, } from "@mui/material";
 import { AppbarContainer, AppbarLogo, AppbarLogoBox, AppbarRoot } from "./AppBar.style";
 
 import { useSelector } from 'react-redux';
-
+import { useTranslation } from 'react-i18next';
 const Appbar = () => {
     const TEMPLATE = useSelector((state) => state.template);
     const [isScroll, setIsScroll] = useState(false);
     const [isClicked, setIsClicked] = useState(false)
     const AppbarConstant = TEMPLATE.components.AppBar;
-    const theme = useTheme();
+    const { t } = useTranslation();
+
 
     const pages = AppbarConstant.AppBarLinks;
     const { logo, siteName, baseURL } = TEMPLATE;
@@ -45,7 +46,7 @@ const Appbar = () => {
                                 key={`${page}-${i}`}
                                 sx={{ my: 2, color: 'white', display: 'block' }}
                             >
-                                {page.title}
+                              {t(page.title)}
                             </Button>
                         ))}
                     </Box>

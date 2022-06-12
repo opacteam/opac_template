@@ -1,12 +1,12 @@
 import React from 'react';
 import { Box, Container } from '@mui/material'
 import styled from "@emotion/styled";
-const LATEST_HEIGHT = 500;
+const LATEST_HEIGHT = 700;
 export const LatestContainer = styled(Container)(_ => ({
     height: `${LATEST_HEIGHT}px`,
    
     position: 'relative',
-    width: '100vw'
+  
 }))
 
 

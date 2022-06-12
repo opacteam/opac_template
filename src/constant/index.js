@@ -4,7 +4,7 @@ export const TEMPLATE = {
     baseURL: "",
     siteName: "OPAC Template",
     logo: "https://4m4you.com/wp-content/uploads/2020/06/logo-placeholder.png",
-    banner: 'https://wallpaperaccess.com/full/253332.jpg',
+    banner: 'https://ogsoftwaresolutions.com.my/wp-content/uploads/2019/08/library.jpeg',
     heading: " OPAC Template",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     pages: {
@@ -17,10 +17,10 @@ export const TEMPLATE = {
     components: {
         AppBar: {
             AppBarLinks: [{
-                title: "Home",
+                title: "home",
                 href: "/"
             }, {
-                title: "Collections",
+                title: "collections",
                 href: "/collections"
             }]
         }

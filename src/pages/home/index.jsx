@@ -16,7 +16,7 @@ const Home = () => {
     return (
         <>
             <Banner />
-            {/* <Latest /> */}
+            <Latest />
             <ExploreCollection />
             <Fab
 
@@ -30,7 +30,7 @@ const Home = () => {
                     position: 'fixed',
                 }} color="secondary" aria-label="edit">
                 <EditIcon />
-            </Fab>
+            </Fab>``
             <Editor />
         </>
     );

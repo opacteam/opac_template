@@ -30,8 +30,7 @@ const Banner = () => {
         //     <ShadowLayerBox />
         // </BannerContainer>
         <BannerContainer maxWidth={false} className="bannerContainer" banner={banner}>
-            {/* <BannerBox banner={banner}></BannerBox> */}
-            {/* <ShadowLayerBox /> */}
+
             <Grid container spacing={2}>
                 <Grid item md={6} sm={12}>
                     <SiteHeading variant="h1" >
@@ -44,14 +43,11 @@ const Banner = () => {
 
             </Grid>
             <Grid container spacing={2}>
-                <Grid item md={6} sm={12} style={{width:'100%'}}>
-                    {/* <SearchBar>
-                        <InputSearch placeholder='Enter your keyword' />
-                        <SubmitSearch variant="contained">Search</SubmitSearch>
-                    </SearchBar> */}
+                <Grid item md={6} sm={12} style={{ width: '100%' }}>
+
                     <Paper
                         component="form"
-                        sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: '100%', maxWidth:'500px' }}
+                        sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: '100%', maxWidth: '500px', marginTop:'80px' }}
                     >
 
                         <InputBase
