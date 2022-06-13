@@ -85,13 +85,43 @@ export const TEMPLATE = {
                 description: "ecDescription",
                 items: [
                     {
-                        thumbnail: "https://picsum.photos/300",
+                        thumbnail: "https://picsum.photos/400/300",
                         title: "Library"
                     },
                     {
-                        thumbnail: "https://picsum.photos/300",
+                        thumbnail: "https://picsum.photos/410/400",
+                        title: "Library"
+                    },
+                    {
+                        thumbnail: "https://picsum.photos/430/500",
+                        title: "Library"
+                    },
+                    {
+                        thumbnail: "https://picsum.photos/440/600",
                         title: "Library"
                     }
+                    , {
+                        thumbnail: "https://picsum.photos/450/700",
+                        title: "Library"
+                    }
+                    , {
+                        thumbnail: "https://picsum.photos/460/800",
+                        title: "Library"
+                    }
+                    , {
+                        thumbnail: "https://picsum.photos/470/900",
+                        title: "Library"
+                    }
+                    , {
+                        thumbnail: "https://picsum.photos/480/350",
+                        title: "Library"
+                    }
+                    , {
+                        thumbnail: "https://picsum.photos/490/450",
+                        title: "Library"
+                    }
+
+
                 ]
             }
         },

@@ -16,12 +16,13 @@ export const FCCard = styled(Card)(({ theme }) => ({
   marginTop: "100px",
   display: "flex",
   flexDirection: "row",
+  alignItems: "center",
   backgroundColor: theme.palette.secondary.dark,
   [theme.breakpoints.down("md")]: {
     flexDirection: "column",
   },
   "&:hover": {
-    boxShadow: '0px 0px 13px 4px rgba(255,255,255,0.34)',
+    boxShadow: "0px 0px 13px 4px rgba(255,255,255,0.34)",
     transform: "translateY(-2px)",
   },
 }));

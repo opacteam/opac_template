@@ -34,7 +34,7 @@ const Home = () => {
                     position: 'fixed',
                 }} color="secondary" aria-label="edit">
                 <EditIcon />
-            </Fab>``
+            </Fab>
             <Editor />
         </>
     );

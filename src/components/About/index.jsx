@@ -9,7 +9,6 @@ const About = () => {
   const { t } = useTranslation();
   const TEMPLATE = useSelector((state) => state.template);
   const about = TEMPLATE.pages.home.about;
-  console.log(about);
   return (
     <AboutContainer maxWidth="false" banner={about.banner}>
       <Container maxWidth={"xl"}>

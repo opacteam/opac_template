@@ -42,14 +42,14 @@ const Appbar = () => {
 
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }} >
                         {pages.map((page, i) => (
-                            <>
+                           
                                 <Button
                                     key={`${page}-${i}`}
                                     sx={{ my: 2, color: !isScroll ? 'white' : 'black', display: 'block' }}
                                 >
                                     {t(page.title)}
                                 </Button>
-                            </>
+                          
                         ))}
                     </Box>
 

@@ -35,7 +35,6 @@ const Latest = props => {
   const TEMPLATE = useSelector((state) => state.template);
   const { latest } = TEMPLATE.pages.home;
   const { t } = useTranslation();
-  console.log(latest)
   useEffect(() => {
     function handleResize() {
       setWindowDimensions(getWindowDimensions());
@@ -61,7 +60,7 @@ const Latest = props => {
         >
           {latest.items.map((item, i) => (
 
-            <SwiperSlide>
+            <SwiperSlide key={item.thumbnail + i}>
               <CarouselBox dimension={windowDimensions} thumbnail={item.thumbnail}>
                 <CarouselText as="p">{item.title}</CarouselText>
               </CarouselBox>
