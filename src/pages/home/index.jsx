@@ -11,6 +11,7 @@ import { toggle } from '../../components/Editor/editorSlice'
 import { useDispatch, useSelector } from "react-redux";
 import Editor from "../../components/Editor";
 import About from "../../components/About";
+import FeaturedCollection from "../../components/FeaturedCollection";
 const Home = () => {
    
     const dispatch = useDispatch();
@@ -19,6 +20,7 @@ const Home = () => {
             <Banner />
             <About />
             <Latest />
+            <FeaturedCollection />
             <ExploreCollection />
             <Fab
 

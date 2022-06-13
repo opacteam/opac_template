@@ -3,7 +3,7 @@ import { styled } from "@mui/material/styles";
 
 const BANNER_HEIGHT = '80vh';
 export const BannerContainer = styled(Container)(({ theme, banner }) => ({
-    padding: '150px 0px',
+    padding: '120px 0px',
     height: BANNER_HEIGHT,
     position: 'relative',
     backgroundImage: `url('${banner}')`,
@@ -11,8 +11,8 @@ export const BannerContainer = styled(Container)(({ theme, banner }) => ({
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     maxHeight: '800px',
+    minHeight: '500px',
 
-    filter: 'brightness(100%)',
     color: 'white',
     textAlign: "left"
 }))
@@ -68,7 +68,8 @@ export const SiteHeading = styled(Typography)(({ theme }) => ({
 }))
 
 export const SiteDescription = styled(Typography)(({ theme }) => ({
-    fontSize: '16px',
-
+    fontSize: '1.5rem',
+    fontWeight:'600',
+    fontFamily: "'Overlock', cursive",
 
 }))

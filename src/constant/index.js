@@ -48,6 +48,10 @@ export const TEMPLATE = {
                     thumbnail: "https://upload.wikimedia.org/wikipedia/commons/7/72/NYC_-_New_York_City_Library_-_1723.jpg",
                     title: "Library"
                 }]
+            },
+            featuredCollection: {
+                heading: 'fcHeading',
+                description: 'fcDescription',
             }
         },
         summary: {},
