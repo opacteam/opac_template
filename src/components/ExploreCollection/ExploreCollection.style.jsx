@@ -6,13 +6,13 @@ export const ExploreCollectionContainer = styled(Container)(({ theme }) => ({
   minHeight: "600px",
   paddingTop: "120px",
   paddingBottom: "120px",
-  backgroundColor: "white",
+  backgroundColor: theme.palette.mode === "light" ? "white" : "#111111",
   width: "100%",
 }));
 
 export const ECBox = styled(Box)(({ theme }) => ({
   position: "relative",
-  boxShadow: "5px 4px 8px 2px rgba(195,195,195,0.74)",
+  boxShadow: "3px 3px 4px 1px rgba(195,195,195,0.74)",
 }));
 
 export const ECBoxShadow = styled(Box)(({ theme }) => ({
@@ -38,8 +38,8 @@ export const ECBoxViewMore = styled("div")((_) => ({
   animationDuration: "1.5s",
   animationIterationCount: "infinite",
   transformOrigin: "bottom",
-  margin:'0 auto',
+  margin: "0 auto",
   textAlign: "center",
-  width:'100%',
-  fontSize:'14px'
+  width: "100%",
+  fontSize: "14px",
 }));

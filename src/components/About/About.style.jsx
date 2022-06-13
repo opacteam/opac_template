@@ -2,13 +2,14 @@ import { Container } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 export const AboutContainer = styled(Container)(({ banner, theme }) => ({
-    backgroundImage: `url("${banner}")`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'bottom',
-    backgroundRepeat: 'no-repeat',
-    backgroundColor: 'white',
-    height: '80vh',
-    width: '100%',
-    paddingTop: '100px',
-    paddingBottom: '100px',
-}))
+  backgroundImage: `url("${banner}")`,
+  backgroundSize: "cover",
+  backgroundPosition: "bottom",
+  backgroundRepeat: "no-repeat",
+  backgroundColor: "white",
+  height: "80vh",
+  width: "100%",
+  paddingTop: "100px",
+  paddingBottom: "100px",
+  filter: theme.palette.mode === "light" ? "" : "invert(100%)",
+}));

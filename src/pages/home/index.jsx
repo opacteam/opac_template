@@ -12,6 +12,8 @@ import { useDispatch, useSelector } from "react-redux";
 import Editor from "../../components/Editor";
 import About from "../../components/About";
 import FeaturedCollection from "../../components/FeaturedCollection";
+import Timeline from "../../components/Timeline";
+
 const Home = () => {
    
     const dispatch = useDispatch();
@@ -22,6 +24,7 @@ const Home = () => {
             <Latest />
             <FeaturedCollection />
             <ExploreCollection />
+            {/* <Timeline /> */}
             <Fab
 
                 onClick={_ => { dispatch(toggle()) }}

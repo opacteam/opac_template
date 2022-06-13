@@ -44,11 +44,11 @@ export const ViewMore = ({ href, text }) => (
       cursor: "pointer",
       fontSize: "1.2rem",
       marginTop: "20px",
+     
     }}
     as="div"
     onClick={(_) => (window.location = href)}
   >
-    {" "}
     {text}
     <span style={{ display: "flex", alignItems: "center" }}>
       <ArrowRightAltIcon />
