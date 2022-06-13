@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
-import { SubDescription, SubHeading } from '../../styles';
+import { SubDescription, SubHeading, ViewMore } from '../../styles';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { Container, Typography } from '@mui/material';
@@ -50,15 +50,7 @@ const Latest = props => {
       <Container maxWidth={'xl'}>
         <SubHeading as="h2">{t(latest.heading)}</SubHeading>
         <SubDescription as="p">{t(latest.description)}</SubDescription>
-        <Typography style={{
-          display: 'flex',
-          justifyContent: 'right',
-          textAlign: 'right',
-          fontWeight: '600',
-          cursor: 'pointer',
-          fontSize: '1.2rem',
-        }} as="div"> {t('viewMore')}<span style={{ display: 'flex', alignItems: 'center', }}><ArrowRightAltIcon /></span></Typography>
-
+        <ViewMore href="/" text={t('viewMore')} />
         <Swiper
           modules={[Navigation, Pagination]}
           slidesPerView={1}

@@ -1,5 +1,5 @@
 import React from 'react'
-import { SubDescription, SubHeading } from '../../styles';
+import { SubDescription, SubHeading, ViewMore } from '../../styles';
 import { Typography, Grid } from '@mui/material';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { AboutContainer } from './About.style'
@@ -19,14 +19,7 @@ const About = () => {
 
                     <SubHeading>{t(about.heading)}</SubHeading>
                     <SubDescription>{t(about.description)}</SubDescription>
-                    <Typography style={{
-                        display: 'flex',
-                        justifyContent: 'left',
-                        marginTop: '80px',
-                        fontWeight: '600',
-                        cursor: 'pointer',
-                        fontSize: '1.2rem',
-                    }} as="div"> {t('viewMore')}<span style={{ display: 'flex', alignItems: 'center', }}><ArrowRightAltIcon /></span></Typography>
+                    <ViewMore href="/" text={t('viewMore')} />
                 </Grid>
 
             </Grid>

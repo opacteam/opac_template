@@ -18,40 +18,66 @@ export const TEMPLATE = {
                 heading: "latestHeading",
                 description: "latestDescription",
                 items: [{
-                    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/7/72/NYC_-_New_York_City_Library_-_1723.jpg",
+                    thumbnail: "https://picsum.photos/400",
                     title: "Library"
                 }, {
-                    thumbnail: "https://static01.nyt.com/images/2022/01/16/fashion/VIRAL-LIBRARY/VIRAL-LIBRARY-videoSixteenByNineJumbo1600.jpg",
+                    thumbnail: "https://picsum.photos/450",
                     title: "Books"
                 }, {
-                    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/7/72/NYC_-_New_York_City_Library_-_1723.jpg",
+                    thumbnail: "https://picsum.photos/500",
                     title: "Library"
                 }, {
-                    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/7/72/NYC_-_New_York_City_Library_-_1723.jpg",
+                    thumbnail: "https://picsum.photos/550",
                     title: "Library"
                 }, {
-                    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/7/72/NYC_-_New_York_City_Library_-_1723.jpg",
+                    thumbnail: "https://picsum.photos/600",
                     title: "Library"
                 }, {
-                    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/7/72/NYC_-_New_York_City_Library_-_1723.jpg",
+                    thumbnail: "https://picsum.photos/650",
                     title: "Library"
                 }, {
-                    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/7/72/NYC_-_New_York_City_Library_-_1723.jpg",
+                    thumbnail: "https://picsum.photos/700",
                     title: "Library"
                 }, , {
-                    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/7/72/NYC_-_New_York_City_Library_-_1723.jpg",
+                    thumbnail: "https://picsum.photos/750",
                     title: "Library"
                 }, {
-                    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/7/72/NYC_-_New_York_City_Library_-_1723.jpg",
+                    thumbnail: "https://picsum.photos/800",
                     title: "Library"
                 }, {
-                    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/7/72/NYC_-_New_York_City_Library_-_1723.jpg",
+                    thumbnail: "https://picsum.photos/850",
                     title: "Library"
                 }]
             },
             featuredCollection: {
                 heading: 'fcHeading',
                 description: 'fcDescription',
+                items: [{
+                        tag: "Item",
+                        title: "Nunc consequat interdum varius",
+                        author: "John Doe",
+                        thumbnail: "https://picsum.photos/510"
+                    },
+                    {
+                        tag: "Document",
+                        title: "Aliquam malesuada bibendum arcu",
+                        author: "Jane Doe",
+                        thumbnail: "https://picsum.photos/520"
+                    },
+
+                    {
+                        tag: "File",
+                        title: "Semper viverra nam libero",
+                        author: "Robbert Doe",
+                        thumbnail: "https://picsum.photos/530"
+                    },
+                    {
+                        tag: "Item",
+                        title: "Pellentesque nec nam aliquam",
+                        author: "Jacky Doe",
+                        thumbnail: "https://picsum.photos/540"
+                    }
+                ]
             }
         },
         summary: {},
