@@ -9,6 +9,7 @@ export const FeatureCollectionContainer = styled(Container)(({ theme }) => ({
   backgroundColor: theme.palette.secondary.dark,
   width: "100%",
   color: "white",
+ 
 }));
 
 export const FCCard = styled(Card)(({ theme }) => ({

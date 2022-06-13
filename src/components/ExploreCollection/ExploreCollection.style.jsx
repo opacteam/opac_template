@@ -12,6 +12,7 @@ export const ExploreCollectionContainer = styled(Container)(({ theme }) => ({
 
 export const ECBox = styled(Box)(({ theme }) => ({
   position: "relative",
+  boxShadow: "5px 4px 8px 2px rgba(195,195,195,0.74)",
 }));
 
 export const ECBoxShadow = styled(Box)(({ theme }) => ({
