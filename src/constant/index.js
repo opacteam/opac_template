@@ -9,16 +9,45 @@ export const TEMPLATE = {
     description: "description",
     pages: {
         home: {
+            about: {
+                heading: 'aboutHeading',
+                description: 'aboutDescription',
+                banner: 'https://www.teahub.io/photos/full/185-1852797_black-and-white-tree-wallpaper.png'
+            },
             latest: {
                 heading: "latestHeading",
                 description: "latestDescription",
                 items: [{
-                    thummnail: "https://upload.wikimedia.org/wikipedia/commons/7/72/NYC_-_New_York_City_Library_-_1723.jpg",
+                    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/7/72/NYC_-_New_York_City_Library_-_1723.jpg",
                     title: "Library"
                 }, {
-                    thummnail: "https://static01.nyt.com/images/2022/01/16/fashion/VIRAL-LIBRARY/VIRAL-LIBRARY-videoSixteenByNineJumbo1600.jpg",
+                    thumbnail: "https://static01.nyt.com/images/2022/01/16/fashion/VIRAL-LIBRARY/VIRAL-LIBRARY-videoSixteenByNineJumbo1600.jpg",
                     title: "Books"
-                }, ]
+                }, {
+                    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/7/72/NYC_-_New_York_City_Library_-_1723.jpg",
+                    title: "Library"
+                }, {
+                    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/7/72/NYC_-_New_York_City_Library_-_1723.jpg",
+                    title: "Library"
+                }, {
+                    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/7/72/NYC_-_New_York_City_Library_-_1723.jpg",
+                    title: "Library"
+                }, {
+                    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/7/72/NYC_-_New_York_City_Library_-_1723.jpg",
+                    title: "Library"
+                }, {
+                    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/7/72/NYC_-_New_York_City_Library_-_1723.jpg",
+                    title: "Library"
+                }, , {
+                    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/7/72/NYC_-_New_York_City_Library_-_1723.jpg",
+                    title: "Library"
+                }, {
+                    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/7/72/NYC_-_New_York_City_Library_-_1723.jpg",
+                    title: "Library"
+                }, {
+                    thumbnail: "https://upload.wikimedia.org/wikipedia/commons/7/72/NYC_-_New_York_City_Library_-_1723.jpg",
+                    title: "Library"
+                }]
             }
         },
         summary: {},

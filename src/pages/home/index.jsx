@@ -10,12 +10,14 @@ import ExploreCollection from '../../components/ExploreCollection'
 import { toggle } from '../../components/Editor/editorSlice'
 import { useDispatch, useSelector } from "react-redux";
 import Editor from "../../components/Editor";
+import About from "../../components/About";
 const Home = () => {
    
     const dispatch = useDispatch();
     return (
         <>
             <Banner />
+            <About />
             <Latest />
             <ExploreCollection />
             <Fab

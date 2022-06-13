@@ -1,5 +1,5 @@
 import { Box, Button, Container, Typography } from "@mui/material";
-import styled from "@emotion/styled";
+import { styled } from "@mui/material/styles";
 
 const BANNER_HEIGHT = '80vh';
 export const BannerContainer = styled(Container)(({ theme, banner }) => ({

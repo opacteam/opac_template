@@ -22,7 +22,8 @@ export const AppbarContainer = styled(Container)(() => ({
 export const AppbarLogoBox = styled(Box)(_ => ({
     display: 'flex',
     alignItems: 'center',
-    cursor: 'pointer'
+    cursor: 'pointer',
+
 
 }));
 

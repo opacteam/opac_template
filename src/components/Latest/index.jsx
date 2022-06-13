@@ -1,16 +1,28 @@
 import React, { useState, useEffect } from 'react'
-import { CarouselBox, LatestBox, LatestContainer } from './Latest.style'
-// Import Swiper React components
+import { CarouselBox, CarouselText, LatestContainer } from './Latest.style'
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from "swiper";
-
 import "swiper/css";
 import "swiper/css/pagination";
 import { SubDescription, SubHeading } from '../../styles';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
+import { Container, Typography } from '@mui/material';
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
+const breakpoints = {
+  600: {
+    slidesPerView: 2,
+  },
+  1200: {
+    slidesPerView: 3,
+  },
+  1300: {
+    slidesPerView: 4,
+  },
 
+}
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
   return {
@@ -34,36 +46,38 @@ const Latest = props => {
 
 
   return (
-    <LatestContainer >
-      <SubHeading as="h2">{t(latest.heading)}</SubHeading>
-      <SubDescription as="p">{t(latest.description)}</SubDescription>
+    <LatestContainer maxWidth={'true'} dimension={windowDimensions} >
+      <Container maxWidth={'xl'}>
+        <SubHeading as="h2">{t(latest.heading)}</SubHeading>
+        <SubDescription as="p">{t(latest.description)}</SubDescription>
+        <Typography style={{
+          display: 'flex',
+          justifyContent: 'right',
+          textAlign: 'right',
+          fontWeight: '600',
+          cursor: 'pointer',
+          fontSize: '1.2rem',
+        }} as="div"> {t('viewMore')}<span style={{ display: 'flex', alignItems: 'center', }}><ArrowRightAltIcon /></span></Typography>
 
-      <Swiper
-        modules={[Navigation, Pagination]}
-        breakpoints={{
-          600: {
-            slidesPerView: 1,
-          },
-          1000: {
-            slidesPerView: 2,
-          },
-          1200: {
-            slidesPerView: 3,
-          },
-          1300: {
-            slidesPerView: 4,
-          }
-        }}
-        spaceBetween={50}
+        <Swiper
+          modules={[Navigation, Pagination]}
+          slidesPerView={1}
+          breakpoints={breakpoints}
+          style={{ marginTop: '100px' }}
+          spaceBetween={20}
 
-      >
-        {latest.items.map((item, i) => (
-          <SwiperSlide>
-            <CarouselBox dimension={windowDimensions} thumbnail={item.thumbnail}></CarouselBox>
-          </SwiperSlide>))}
+        >
+          {latest.items.map((item, i) => (
+
+            <SwiperSlide>
+              <CarouselBox dimension={windowDimensions} thumbnail={item.thumbnail}>
+                <CarouselText as="p">{item.title}</CarouselText>
+              </CarouselBox>
+            </SwiperSlide>))}
 
 
-      </Swiper>
+        </Swiper>
+      </Container>
 
     </LatestContainer>
   )

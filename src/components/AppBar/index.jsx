@@ -35,7 +35,7 @@ const Appbar = () => {
     return (
         <>
             <AppbarRoot position="fixed" className="header" scroll={isScroll} >
-                <AppbarContainer >
+                <AppbarContainer maxWidth={'xl'}>
                     <AppbarLogoBox onClick={_ => window.location = baseURL} >
                         <AppbarLogo component="img" src={logo} alt={`${siteName} logo`}></AppbarLogo>
                     </AppbarLogoBox>

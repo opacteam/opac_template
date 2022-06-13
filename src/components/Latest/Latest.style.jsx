@@ -1,52 +1,74 @@
 import React from 'react';
-import { Box, Container } from '@mui/material'
-import styled from "@emotion/styled";
+import { Box, Container, Typography } from '@mui/material'
+import { styled } from "@mui/material/styles";
 import PropTypes from 'prop-types';
-const LATEST_HEIGHT = 700;
-export const LatestContainer = styled(Container)(_ => ({
-    height: `${LATEST_HEIGHT}px`,
-    padding: '100px 0px',
-    position: 'relative',
-}))
+const BaseHeight = 500;
+export const LatestContainer = styled(Container)(({ theme, dimension }) => {
+    let { width } = dimension;
+    const MAX_WIDTH = 1500;
+    return ({
+        backgroundColor: theme.palette.primary.light,
+        height: (_ => {
+            if (width < 600)
+                return `${width + BaseHeight}px`
+            if (width > 600 && width <= 1000)
+                return `${width / 2 + BaseHeight}px`
+            if (width > 1000 && width <= 1200)
+                return `${width / 3 + BaseHeight}px`
+            else
+                return `${(width > MAX_WIDTH ? MAX_WIDTH : width) / 4 + BaseHeight}px`
+
+        })(),
+        paddingTop: '100px',
+        paddingBottom: '100px',
+        position: 'relative',
+    })
+})
 
 
-export const LatestBox = styled(Box)(({ theme }) => ({
+export const CarouselText = styled(Typography)((description) => ({
+    fontSize: '20px',
+    color: 'white',
     position: 'absolute',
-    top: '-100px',
-    height: `${LATEST_HEIGHT - 100}px`,
-    background: 'blue',
-    width: '80vw',
-    maxWidth: '1000px',
-    left: 0,
-    right: 0,
-    margin: '0 auto',
-    [theme.breakpoints.down('md')]: {
-        width: '100%'
-    },
+    bottom: '16px',
+    left: '16px',
+    fontWeight: '600'
 
 }))
-
 export const CarouselBox = styled(Box)(({ theme, dimension, thumbnail }) => {
     let { width, height } = dimension;
+    const MAX_WIDTH = 1500;
     return ({
         backgroundImage: `url("${thumbnail}")`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         width: '100%',
+        cursor: 'pointer',
+        filter: "brightness(0.8)",
+        position: 'relative',
+        boxShadow: '6px 6px 6px 0px rgba(0,0,0,0.6)',
+        ':hover': {
+            filter: "brightness(1)",
+        },
         height: (_ => {
-            if (width <= 600)
-                return '100vw'
+            if (width < 600)
+                return `${(width - 32)}px`
             if (width > 600 && width <= 1000)
-                return '50vw'
+                return `${(width - 52) / 2}px`
             if (width > 1000 && width <= 1200)
-                return `${100 / 3}vw`
+                return `${(width - 72) / 3}px`
             else
-                return '25vw'
+                return `${(width > MAX_WIDTH ? MAX_WIDTH : width - 92) / 4}px`
+
         })(),
     })
 });
 
+LatestContainer.propTypes = {
+    dimension: PropTypes.object,
+
+}
 CarouselBox.propTypes = {
     dimension: PropTypes.object,
     thumbnail: PropTypes.string

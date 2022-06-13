@@ -14,19 +14,20 @@ const Banner = () => {
     const { t } = useTranslation();
     return (
 
-        <BannerContainer maxWidth={false} className="bannerContainer" banner={banner}>
+        <BannerContainer maxWidth={'true'} className="bannerContainer" banner={banner}>
 
-            <Container><Grid container spacing={2}>
-                <Grid item md={6} sm={12}>
-                    <SiteHeading variant="h1" >
-                        {t(heading)}
-                    </SiteHeading>
-                    <SiteDescription variant="p"  >
-                        {t(description)}
-                    </SiteDescription>
+            <Container maxWidth={'xl'}>
+                <Grid container spacing={2}>
+                    <Grid item md={6} sm={12}>
+                        <SiteHeading variant="h1" >
+                            {t(heading)}
+                        </SiteHeading>
+                        <SiteDescription variant="p"  >
+                            {t(description)}
+                        </SiteDescription>
+                    </Grid>
+
                 </Grid>
-
-            </Grid>
                 <Grid container spacing={2}>
                     <Grid item md={6} sm={12} style={{ width: '100%' }}>
 
