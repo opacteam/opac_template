@@ -28,4 +28,6 @@ export const LatestBox = styled(Box)(({ theme }) => ({
 
 export const LatestCarousel = styled(Carousel)(({ theme }) => ({
   height: "100%",
+ 
+
 }));
