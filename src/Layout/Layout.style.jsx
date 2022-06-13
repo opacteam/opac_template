@@ -5,3 +5,4 @@ export const LayoutMainBox = styled(Box)(_ => ({
     minHeight: '100vh',
 
 }));
+

@@ -31,7 +31,7 @@ const Footer = () => {
                     : theme.palette.grey[800],
         }}
     >
-        <Container maxWidth="sm">
+        <Container >
             <Typography variant="body1">
                 {/* My sticky footer can be found here. */}
             </Typography>

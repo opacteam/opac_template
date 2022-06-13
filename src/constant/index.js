@@ -4,40 +4,96 @@ export const TEMPLATE = {
     baseURL: "",
     siteName: "OPAC Template",
     logo: "https://4m4you.com/wp-content/uploads/2020/06/logo-placeholder.png",
-    banner: 'https://wallpaperaccess.com/full/253332.jpg',
-    heading: " OPAC Template",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    banner: 'https://ogsoftwaresolutions.com.my/wp-content/uploads/2019/08/library.jpeg',
+    heading: "heading",
+    description: "description",
     pages: {
         home: {
-            exploreCollection: [{
-                img: 'https://titanapi.minisisinc.com/api/links/515fdd13553d4f37a82b97836f989ae4/uuid/b88e5d0e89b544d09bdf55c345219021/thumbnail',
-                title: "sample"
-            }, {
-                img: 'https://titanapi.minisisinc.com/api/links/515fdd13553d4f37a82b97836f989ae4/uuid/6aaef03ee8d34fa9b546094834d4a400/thumbnail',
-                title: "sample"
+            about: {
+                heading: 'aboutHeading',
+                description: 'aboutDescription',
+                banner: 'https://www.teahub.io/photos/full/185-1852797_black-and-white-tree-wallpaper.png'
             },
-            {
-                img: 'https://titanapi.minisisinc.com/api/links/515fdd13553d4f37a82b97836f989ae4/uuid/4448d8f6e63640c5a2226a96e06b62a2/thumbnail',
-                title: "sample"
-            }, {
-                img: 'https://titanapi.minisisinc.com/api/links/515fdd13553d4f37a82b97836f989ae4/uuid/087f992a063a4c32a7a61dd84b46d8a6/thumbnail',
-                title: "sample"
-            }, {
-                img: 'https://titanapi.minisisinc.com/api/links/515fdd13553d4f37a82b97836f989ae4/uuid/6aaef03ee8d34fa9b546094834d4a400/thumbnail',
-                title: "sample"
-            }, {
-                img: 'https://titanapi.minisisinc.com/api/links/515fdd13553d4f37a82b97836f989ae4/uuid/6aaef03ee8d34fa9b546094834d4a400/thumbnail',
-                title: "sample"
-            }, {
-                img: 'https://titanapi.minisisinc.com/api/links/515fdd13553d4f37a82b97836f989ae4/uuid/6aaef03ee8d34fa9b546094834d4a400/thumbnail',
-                title: "sample"
-            }, {
-                img: 'https://titanapi.minisisinc.com/api/links/515fdd13553d4f37a82b97836f989ae4/uuid/6aaef03ee8d34fa9b546094834d4a400/thumbnail',
-                title: "sample"
+            latest: {
+                heading: "latestHeading",
+                description: "latestDescription",
+                // eslint-disable-next-line no-sparse-arrays
+                items: [{
+                    thumbnail: "https://picsum.photos/400",
+                    title: "Library"
+                }, {
+                    thumbnail: "https://picsum.photos/450",
+                    title: "Books"
+                }, {
+                    thumbnail: "https://picsum.photos/500",
+                    title: "Library"
+                }, {
+                    thumbnail: "https://picsum.photos/550",
+                    title: "Library"
+                }, {
+                    thumbnail: "https://picsum.photos/600",
+                    title: "Library"
+                }, {
+                    thumbnail: "https://picsum.photos/650",
+                    title: "Library"
+                }, {
+                    thumbnail: "https://picsum.photos/700",
+                    title: "Library"
+                }, , {
+                    thumbnail: "https://picsum.photos/750",
+                    title: "Library"
+                }, {
+                    thumbnail: "https://picsum.photos/800",
+                    title: "Library"
+                }, {
+                    thumbnail: "https://picsum.photos/850",
+                    title: "Library"
+                }]
             },
+            featuredCollection: {
+                heading: 'fcHeading',
+                description: 'fcDescription',
+                items: [{
+                    tag: "Item",
+                    title: "Nunc consequat interdum varius",
+                    author: "John Doe",
+                    thumbnail: "https://picsum.photos/510"
+                },
+                {
+                    tag: "Document",
+                    title: "Aliquam malesuada bibendum arcu",
+                    author: "Jane Doe",
+                    thumbnail: "https://picsum.photos/520"
+                },
 
-
-            ]
+                {
+                    tag: "File",
+                    title: "Semper viverra nam libero",
+                    author: "Robbert Doe",
+                    thumbnail: "https://picsum.photos/530"
+                },
+                {
+                    tag: "Item",
+                    title: "Pellentesque nec nam aliquam",
+                    author: "Jacky Doe",
+                    thumbnail: "https://picsum.photos/540"
+                }
+                ]
+            },
+            exploreCollection: {
+                heading: "ecHeading",
+                description: "ecDescription",
+                items: [
+                    {
+                        thumbnail: "https://picsum.photos/300",
+                        title: "Library"
+                    },
+                    {
+                        thumbnail: "https://picsum.photos/300",
+                        title: "Library"
+                    }
+                ]
+            }
         },
         summary: {},
         detail: {},
@@ -45,10 +101,10 @@ export const TEMPLATE = {
     components: {
         AppBar: {
             AppBarLinks: [{
-                title: "Home",
+                title: "home",
                 href: "/"
             }, {
-                title: "Collections",
+                title: "collections",
                 href: "/collections"
             }]
         }
@@ -72,5 +128,7 @@ export const templateSlice = createSlice({
 
 
 export const { setBanner, setHeading } = templateSlice.actions;
+
+
 
 export default templateSlice.reducer;
