@@ -147,3 +147,7 @@ code {
     max-width: 400px;
     margin: 0 auto;
 }
+
+.editorDrawer .MuiPaper-root {
+    width: 50vw !important;
+}

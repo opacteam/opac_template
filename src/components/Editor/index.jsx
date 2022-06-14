@@ -27,8 +27,9 @@ const Editor = () => {
   return (
     <React.Fragment>
       <Drawer
+        className="editorDrawer"
         anchor="right"
-        sx={{ width: "600px" }}
+        sx={{ width: "600px", maxWidth: "60vw" }}
         open={open}
         onClose={(_) => dispatch(toggle())}
       >
