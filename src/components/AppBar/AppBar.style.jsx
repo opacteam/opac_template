@@ -2,7 +2,7 @@ import { Container, IconButton, List, Typography, Box, AppBar } from "@mui/mater
 import { styled } from "@mui/material/styles";
 
 export const AppbarRoot = styled(AppBar)(({ scroll, theme }) => ({
-    backgroundColor: !scroll ? 'transparent' : 'white',
+    backgroundColor: scroll === 0 ? 'transparent' : 'white',
     boxShadow: 'none',
     width: '100vw',
     transition: 'all 300ms ease-out',

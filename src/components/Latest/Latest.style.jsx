@@ -38,7 +38,9 @@ export const CarouselText = styled(Typography)((description) => ({
 export const CarouselBox = styled(Box)(({ theme, dimension, thumbnail }) => {
     let { width, height } = dimension;
     const MAX_WIDTH = 1500;
+
     return ({
+        borderRadius: '5px',
         backgroundImage: `url("${thumbnail}")`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
@@ -60,10 +62,15 @@ export const CarouselBox = styled(Box)(({ theme, dimension, thumbnail }) => {
                 return `${(width - 72) / 3}px`
             else
                 return `${(width > MAX_WIDTH ? MAX_WIDTH : width - 92) / 4}px`
-
         })(),
     })
 });
+
+export const CarouselPagination = styled(Box)(_ => ({
+    display: 'flex',
+    width: '80%',
+    maxWidth: '500px'
+}))
 
 LatestContainer.propTypes = {
     dimension: PropTypes.object,

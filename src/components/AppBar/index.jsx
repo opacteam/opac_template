@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 const Appbar = () => {
     const TEMPLATE = useSelector((state) => state.template);
-    const [isScroll, setIsScroll] = useState(false);
+    const [isScroll, setIsScroll] = useState(0);
     const [isClicked, setIsClicked] = useState(false)
     const AppbarConstant = TEMPLATE.components.AppBar;
     const { t } = useTranslation();
@@ -20,9 +20,9 @@ const Appbar = () => {
             const scrolled = window.scrollY > 80
 
             if (scrolled) {
-                setIsScroll(true)
+                setIsScroll(1)
             } else {
-                setIsScroll(false)
+                setIsScroll(0)
             }
         }
         document.addEventListener('scroll', handleScroll);
