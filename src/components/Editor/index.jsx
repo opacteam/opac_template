@@ -16,10 +16,13 @@ import { MaterialUISwitch } from "./Editor.style";
 import { toggleLanguage } from "../../i18n/languageSlice";
 import { JsonEditor } from "jsoneditor-react";
 import "jsoneditor-react/es/editor.min.css";
-import JSONEditor from "jsoneditor";
+import { updateFrTranslation } from "../../i18n/frTranslation";
+import { updateEnTranslation } from "../../i18n/enTranslation";
 const Editor = () => {
   const open = useSelector((state) => state.editor.open);
   const TEMPLATE = useSelector((state) => state.template);
+  const enTranslation = useSelector((state) => state.enTranslation);
+  const frTranslation = useSelector((state) => state.frTranslation);
   const dispatch = useDispatch();
   return (
     <React.Fragment>
@@ -63,6 +66,14 @@ const Editor = () => {
         <JsonEditor
           value={TEMPLATE}
           onChange={(e) => dispatch(setTemplate(e))}
+        />
+        <JsonEditor
+          value={enTranslation}
+          onChange={(e) => dispatch(updateEnTranslation(e))}
+        />
+        <JsonEditor
+          value={frTranslation}
+          onChange={(e) => dispatch(updateFrTranslation(e))}
         />
       </Drawer>
     </React.Fragment>

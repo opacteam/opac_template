@@ -26,6 +26,7 @@ export const Colors = {
     white: "#fff",
     black: "#000",
 };
+
 export const lightTheme = createTheme({
     palette: {
         mode: 'light',
