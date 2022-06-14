@@ -54,37 +54,36 @@ export const TEMPLATE = {
                 heading: 'fcHeading',
                 description: 'fcDescription',
                 items: [{
-                    tag: "Item",
-                    title: "Nunc consequat interdum varius",
-                    author: "John Doe",
-                    thumbnail: "https://picsum.photos/510"
-                },
-                {
-                    tag: "Document",
-                    title: "Aliquam malesuada bibendum arcu",
-                    author: "Jane Doe",
-                    thumbnail: "https://picsum.photos/520"
-                },
+                        tag: "Item",
+                        title: "Nunc consequat interdum varius",
+                        author: "John Doe",
+                        thumbnail: "https://picsum.photos/510"
+                    },
+                    {
+                        tag: "Document",
+                        title: "Aliquam malesuada bibendum arcu",
+                        author: "Jane Doe",
+                        thumbnail: "https://picsum.photos/520"
+                    },
 
-                {
-                    tag: "File",
-                    title: "Semper viverra nam libero",
-                    author: "Robbert Doe",
-                    thumbnail: "https://picsum.photos/530"
-                },
-                {
-                    tag: "Item",
-                    title: "Pellentesque nec nam aliquam",
-                    author: "Jacky Doe",
-                    thumbnail: "https://picsum.photos/540"
-                }
+                    {
+                        tag: "File",
+                        title: "Semper viverra nam libero",
+                        author: "Robbert Doe",
+                        thumbnail: "https://picsum.photos/530"
+                    },
+                    {
+                        tag: "Item",
+                        title: "Pellentesque nec nam aliquam",
+                        author: "Jacky Doe",
+                        thumbnail: "https://picsum.photos/540"
+                    }
                 ]
             },
             exploreCollection: {
                 heading: "ecHeading",
                 description: "ecDescription",
-                items: [
-                    {
+                items: [{
                         thumbnail: "https://picsum.photos/400/300",
                         title: "Library"
                     },
@@ -99,24 +98,19 @@ export const TEMPLATE = {
                     {
                         thumbnail: "https://picsum.photos/440/600",
                         title: "Library"
-                    }
-                    , {
+                    }, {
                         thumbnail: "https://picsum.photos/450/700",
                         title: "Library"
-                    }
-                    , {
+                    }, {
                         thumbnail: "https://picsum.photos/460/800",
                         title: "Library"
-                    }
-                    , {
+                    }, {
                         thumbnail: "https://picsum.photos/470/900",
                         title: "Library"
-                    }
-                    , {
+                    }, {
                         thumbnail: "https://picsum.photos/480/350",
                         title: "Library"
-                    }
-                    , {
+                    }, {
                         thumbnail: "https://picsum.photos/490/450",
                         title: "Library"
                     }
@@ -149,15 +143,20 @@ export const templateSlice = createSlice({
     name: 'template',
     initialState: TEMPLATE,
     reducers: {
-        setBanner: (state, banner) => ({ ...state, banner: banner }),
+        setBanner: (state, banner) => ({...state, banner: banner }),
 
-        setHeading: (state, heading) => ({ ...state, heading: heading.payload }),
+        setHeading: (state, heading) => ({...state, heading: heading.payload }),
+
+        setTemplate: (state, action) => {
+
+            return {...action.payload }
+        }
 
     }
 })
 
 
-export const { setBanner, setHeading } = templateSlice.actions;
+export const { setBanner, setHeading, setTemplate } = templateSlice.actions;
 
 
 
