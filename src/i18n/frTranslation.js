@@ -18,7 +18,9 @@ let fr = {
     "fcHeading": "Collection en vedette",
     "fcDescription": "Le Meilleur Choix",
     "ecHeading": "Explorer la collection",
-    "ecDescription": "La plupart des recherches de"
+    "ecDescription": "La plupart des recherches de",
+    "tlHeading": "Chronologie",
+    "tlDescription": "Notre histoire"
 }
 
 export const frTranslation = createSlice({

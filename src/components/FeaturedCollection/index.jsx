@@ -13,6 +13,7 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
+import SectionHeader from "../SectionHeader";
 const FeaturedCollection = () => {
   const TEMPLATE = useSelector((state) => state.template);
   const fc = TEMPLATE.pages.home.featuredCollection;
@@ -20,13 +21,7 @@ const FeaturedCollection = () => {
   return (
     <FeatureCollectionContainer maxWidth={"false"}>
       <Container maxWidth="xl">
-        <SubHeading style={{ color: "white" }} as="h2">
-          {t(fc.heading)}
-        </SubHeading>
-        <SubDescription style={{ color: "white" }} as="p">
-          {t(fc.description)}
-        </SubDescription>
-        <ViewMore href="/" text={t("viewMore")} />
+      <SectionHeader heading={fc.heading} description={fc.description} />
         <Grid container spacing={2}>
           {fc.items.map((item, i) => {
             let { title, author, tag, thumbnail } = item;

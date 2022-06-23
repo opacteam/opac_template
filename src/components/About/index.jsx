@@ -5,6 +5,7 @@ import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { AboutContainer } from "./About.style";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
+import SectionHeader from "../SectionHeader";
 const About = () => {
   const { t } = useTranslation();
   const TEMPLATE = useSelector((state) => state.template);
@@ -17,9 +18,10 @@ const About = () => {
           <Grid item lg={6} md={6} sm={0} />
 
           <Grid item lg={6} md={6} sm={12}>
-            <SubHeading>{t(about.heading)}</SubHeading>
-            <SubDescription>{t(about.description)}</SubDescription>
-            <ViewMore href="/" text={t("viewMore")} />
+            <SectionHeader
+              heading={about.heading}
+              description={about.description}
+            />
           </Grid>
         </Grid>
       </Container>

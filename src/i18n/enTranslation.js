@@ -15,9 +15,12 @@ let en = {
     "aboutHeading": "About Us",
     "aboutDescription": "Lorem ipsum dolor sit amet. Et sapiente omnis et dicta vero qui cumque aperiam sed quia harum sit atque dolore. Iusto quam aut iste Quis id ullam rerum ad molestias sunt et quaerat iure.",
     "fcHeading": "Featured Collection",
-    "fcDescription": "Top Picks From Us",
+    "fcDescription": "Top picks from us",
     "ecHeading": "Explore Collection",
-    "ecDescription": "Most searches for"
+    "ecDescription": "Most searches for",
+    "tlHeading": "Timeline",
+    "tlDescription": "Our history"
+
 }
 
 export const enTranslation = createSlice({

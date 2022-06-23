@@ -117,6 +117,10 @@ export const TEMPLATE = {
 
 
                 ]
+            },
+            timeline: {
+                heading: "tlHeading",
+                description: "tlDescription"
             }
         },
         summary: {},

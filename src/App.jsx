@@ -9,8 +9,6 @@ import { ThemeProvider } from "@mui/material/styles";
 import { useSelector } from "react-redux";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-
-
 import Counter from "./components/Counter";
 import Layout from "./Layout";
 
@@ -20,7 +18,6 @@ function App() {
   const { language } = useSelector((state) => state.language);
   const enTranslation = useSelector((state) => state.enTranslation);
   const frTranslation = useSelector((state) => state.frTranslation);
-  console.log(enTranslation, frTranslation);
   i18n.use(initReactI18next).init({
     fallbackLng: "en",
 

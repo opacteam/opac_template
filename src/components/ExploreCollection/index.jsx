@@ -9,6 +9,7 @@ import { SubHeading, SubDescription, ViewMore } from "../../styles";
 import { useTranslation } from "react-i18next";
 import { ExploreCollectionContainer } from "./ExploreCollection.style";
 import ExploreCollectionImage from "./ExploreCollectionImage";
+import SectionHeader from "../SectionHeader";
 const Label = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
@@ -29,10 +30,7 @@ export default function ImageMasonry() {
   return (
     <ExploreCollectionContainer maxWidth="false">
       <Container maxWidth="xl">
-        <SubHeading as="h2">{t(heading)}</SubHeading>
-        <SubDescription as="p">{t(description)}</SubDescription>
-        <ViewMore href="/" text={t("viewMore")} />
-
+        <SectionHeader heading={heading} description={description} />
         <Box sx={{ width: "100%", minHeight: 500, marginTop: "50px" }}>
           <Masonry columns={{ xs: 1, sm: 3, md: 4 }} spacing={2}>
             {items.map((item, index) => (
