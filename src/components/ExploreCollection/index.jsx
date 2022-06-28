@@ -28,6 +28,8 @@ export default function ImageMasonry() {
   const { heading, description, items } = ec;
   const { t } = useTranslation();
   return (
+
+    // TODO: Add Carousel on Mobile view
     <ExploreCollectionContainer maxWidth="false">
       <Container maxWidth="xl">
         <SectionHeader heading={heading} description={description} />

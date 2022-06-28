@@ -4,7 +4,7 @@ export const TEMPLATE = {
     baseURL: "",
     siteName: "OPAC Template",
     logo: "https://4m4you.com/wp-content/uploads/2020/06/logo-placeholder.png",
-    banner: 'https://ogsoftwaresolutions.com.my/wp-content/uploads/2019/08/library.jpeg',
+    banner: 'https://images8.alphacoders.com/502/502079.jpg',
     heading: "heading",
     description: "description",
     pages: {

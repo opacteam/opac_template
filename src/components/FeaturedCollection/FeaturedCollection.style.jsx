@@ -25,6 +25,7 @@ export const FCCard = styled(Card)(({ theme }) => ({
   "&:hover": {
     boxShadow: "0px 0px 13px 4px rgba(255,255,255,0.34)",
     transform: "translateY(-2px)",
+    transition: "all 0.2s",
   },
 }));
 

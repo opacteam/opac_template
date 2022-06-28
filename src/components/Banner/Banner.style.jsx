@@ -1,75 +1,64 @@
 import { Box, Button, Container, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-const BANNER_HEIGHT = '80vh';
+const BANNER_HEIGHT = "100vh";
 export const BannerContainer = styled(Container)(({ theme, banner }) => ({
-    padding: '120px 0px',
-    height: BANNER_HEIGHT,
-    position: 'relative',
-    backgroundImage: `url('${banner}')`,
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    maxHeight: '800px',
-    minHeight: '500px',
+  padding: "140px 0px",
+  height: BANNER_HEIGHT,
+  position: "relative",
+  backgroundImage: `url('${banner}')`,
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "cover",
+  minHeight: "500px",
+  color: "white",
+  textAlign: "left",
+  backgroundAttachment:'fixed'
+}));
 
-    color: 'white',
-    textAlign: "left"
-}))
-
-
-
-export const ShadowLayerBox = styled(Box)(_ => ({
-    position: 'absolute',
-    top: '0',
-    left: '0',
-    width: '100%',
-    height: BANNER_HEIGHT,
-    backgroundColor: 'rgba(12, 12, 12, 0.7)',
-    zIndex: "-1"
-
-}))
-
-
+export const ShadowLayerBox = styled(Box)((_) => ({
+  position: "absolute",
+  top: "0",
+  left: "0",
+  width: "100%",
+  height: BANNER_HEIGHT,
+  backgroundColor: "rgba(12, 12, 12, 0.7)",
+  zIndex: "-1",
+}));
 
 export const SearchBar = styled(Box)(({ theme }) => ({
+  height: "40px",
+  display: "flex",
 
-    height: '40px',
-    display: 'flex',
+  width: "100%",
+  margin: "0 auto",
+  boxShadow: "0px 0px 4px 4px rgba(55,55,55,0.6)",
 
-    width: '100%',
-    margin: '0 auto',
-    boxShadow: '0px 0px 4px 4px rgba(55,55,55,0.6)',
-
-
-    padding: '0'
+  padding: "0",
 }));
 
-export const InputSearch = styled('input')(({ theme }) => ({
-    height: '100%',
-    width: '100%',
-    '&:focus': {
-        outline: 'none',
-    }
+export const InputSearch = styled("input")(({ theme }) => ({
+  height: "100%",
+  width: "100%",
+  "&:focus": {
+    outline: "none",
+  },
 }));
 
-export const SubmitSearch = styled(Button)(_ => ({
-    flexGrow: '1',
-    borderRadius: 0
-
-}))
+export const SubmitSearch = styled(Button)((_) => ({
+  flexGrow: "1",
+  borderRadius: 0,
+}));
 export const SiteHeading = styled(Typography)(({ theme }) => ({
-    fontSize: '80px',
-    marginBottom: '20px',
-    [theme.breakpoints.down('md')]: {
-        fontSize: '40px',
-
-    },
-}))
+  fontSize: "80px",
+  marginBottom: "20px",
+  [theme.breakpoints.down("md")]: {
+    fontSize: "40px",
+  },
+}));
 
 export const SiteDescription = styled(Typography)(({ theme }) => ({
-    fontSize: '1.5rem',
-    fontWeight:'600',
-    fontFamily: "'Overlock', cursive",
-
-}))
+  fontSize: "1.5rem",
+  fontWeight: "600",
+  fontFamily: "'Overlock', cursive",
+}));

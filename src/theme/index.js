@@ -71,10 +71,14 @@ export const darkTheme = createTheme({
     palette: {
         mode: 'dark',
         primary: {
-            main: Colors.primary,
+            light: '#484848',
+            main: '#212121',
+            dark: '#000000',
         },
         secondary: {
-            main: Colors.danger,
+            light: '#efdcd5',
+            main: '#bcaaa4',
+            dark: '#8c7b75',
         },
     },
     typography: {

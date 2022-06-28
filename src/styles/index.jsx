@@ -4,7 +4,6 @@ import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import PropTypes from "prop-types";
 export const SubHeading = styled(Typography)((_) => ({
   opacity: ".6",
-  color: "#111111",
   fontSize: "13px",
   textTransform: "uppercase",
   textAlign: "left",
@@ -13,7 +12,6 @@ export const SubHeading = styled(Typography)((_) => ({
 
 export const SubDescription = styled(Typography)(({ theme }) => ({
   marginTop: "25px",
-  color: "black",
   lineHeight: "1.3",
   letterSpacing: "1.5px",
   textAlign: "left",
@@ -48,7 +46,7 @@ export const ViewMore = ({ href, text }) => (
     }}
     as="div"
     onClick={(_) => (window.location = href)}
-  >
+>
     {text}
     <span style={{ display: "flex", alignItems: "center" }}>
       <ArrowRightAltIcon />

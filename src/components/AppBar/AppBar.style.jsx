@@ -1,35 +1,33 @@
-import { Container, IconButton, List, Typography, Box, AppBar } from "@mui/material";
+import {
+  Container,
+  IconButton,
+  List,
+  Typography,
+  Box,
+  AppBar,
+} from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 export const AppbarRoot = styled(AppBar)(({ scroll, theme }) => ({
-    backgroundColor: scroll === 0 ? 'transparent' : 'white',
-    boxShadow: 'none',
-    width: '100vw',
-    transition: 'all 300ms ease-out',
-   
+  backgroundColor: scroll === 0 ? "transparent" : theme.palette.secondary.light,
 
-}))
+  boxShadow: "none",
+  width: "100vw",
+  transition: "all 300ms ease-out",
+}));
 export const AppbarContainer = styled(Container)(() => ({
-    display: 'flex',
-    width: '100%',
-    justifyContent: 'space-between',
-    height: '60px',
-   
-
-
+  display: "flex",
+  width: "100%",
+  justifyContent: "space-between",
+  height: "60px",
 }));
 
-export const AppbarLogoBox = styled(Box)(_ => ({
-    display: 'flex',
-    alignItems: 'center',
-    cursor: 'pointer',
-
-
+export const AppbarLogoBox = styled(Box)((_) => ({
+  display: "flex",
+  alignItems: "center",
+  cursor: "pointer",
 }));
-
 
 export const AppbarLogo = styled(Box)(() => ({
-
-    height: '50px'
-
+  height: "50px",
 }));
