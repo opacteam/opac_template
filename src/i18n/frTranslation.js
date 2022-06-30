@@ -8,6 +8,11 @@ import { createSlice } from '@reduxjs/toolkit';
 let fr = {
     "home": "Page d'accueil",
     "collections": "Collections",
+    "headerHome": "Page d'accueil",
+    "headerAbout": "Environ",
+    "headerArchives": "Archives",
+    "headerArtifacts": "Artefacts",
+    "headerContact": "Commande & Contact",
     "heading": "Modèle OPAC",
     "description": "Hic repellat reprehenderit et enim cumque et nihil. Ab consequuntur perferendis qui officiis corporis et saepe tempora ab natus consequatur.",
     "latestHeading": "Nos Collections",

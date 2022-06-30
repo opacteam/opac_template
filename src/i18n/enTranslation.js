@@ -7,6 +7,11 @@ import { createSlice } from '@reduxjs/toolkit';
 let en = {
     "home": "Home",
     "collections": "Collections",
+    "headerHome": "Home",
+    "headerAbout": "About",
+    "headerArchives": "Archives",
+    "headerArtifacts": "Artifacts",
+    "headerContact": "Ordering & Contact",
     "heading": "OPAC Template",
     "description": "Lorem ipsum dolor sit amet. Et sapiente omnis et dicta vero qui cumque aperiam sed quia harum sit atque dolore. Iusto quam aut iste Quis id ullam rerum ad molestias sunt et quaerat iure.",
     "latestHeading": "Our Collections",
@@ -15,12 +20,9 @@ let en = {
     "aboutHeading": "About Us",
     "aboutDescription": "Lorem ipsum dolor sit amet. Et sapiente omnis et dicta vero qui cumque aperiam sed quia harum sit atque dolore. Iusto quam aut iste Quis id ullam rerum ad molestias sunt et quaerat iure.",
     "fcHeading": "Featured Collection",
-    "fcDescription": "Top picks from us",
+    "fcDescription": "Top Picks From Us",
     "ecHeading": "Explore Collection",
-    "ecDescription": "Most searches for",
-    "tlHeading": "Timeline",
-    "tlDescription": "Our history"
-
+    "ecDescription": "Most searches for"
 }
 
 export const enTranslation = createSlice({

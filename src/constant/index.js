@@ -3,8 +3,8 @@ import { createSlice } from '@reduxjs/toolkit';
 export const TEMPLATE = {
     baseURL: "",
     siteName: "OPAC Template",
-    logo: "https://4m4you.com/wp-content/uploads/2020/06/logo-placeholder.png",
-    banner: 'https://images8.alphacoders.com/502/502079.jpg',
+    logo: "http://surrey.minisisinc.com/surrey/images/SAMOA-Banner.png",
+    banner: 'https://www.surrey.ca/sites/default/files/styles/21x9_1920w/public/2022-05/EdgewoodParkFlowers.jpg?h=56d0ca2e&itok=lPdhduvZ',
     heading: "heading",
     description: "description",
     pages: {
@@ -129,11 +129,20 @@ export const TEMPLATE = {
     components: {
         AppBar: {
             AppBarLinks: [{
-                title: "home",
+                title: "headerHome",
                 href: "/"
             }, {
-                title: "collections",
-                href: "/collections"
+                title: "headerAbout",
+                href: "/",
+            }, {
+                title: "headerArchives",
+                href: "/",
+            }, {
+                title: "headerArtifacts",
+                href: "/",
+            }, {
+                title: "headerContact",
+                href: "/",
             }]
         }
     },
