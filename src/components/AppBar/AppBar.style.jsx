@@ -31,7 +31,9 @@ export const AppbarLogoBox = styled(Box)((_) => ({
   cursor: "pointer",
 }));
 
-export const AppbarLogo = styled(Box)(() => ({}));
+export const AppbarLogo = styled(Box)(() => ({
+  maxWidth: "250px",
+}));
 
 export const AppbarLinkBox = styled(Box)(() => ({
   justifyContent: "space-between",

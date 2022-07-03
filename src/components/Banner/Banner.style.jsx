@@ -3,7 +3,7 @@ import { styled } from "@mui/material/styles";
 
 const BANNER_HEIGHT = "100vh";
 export const BannerContainer = styled(Container)(({ theme, banner }) => ({
-  padding: "140px 0px",
+  padding: "20% 0px",
   height: BANNER_HEIGHT,
   position: "relative",
   backgroundImage: `url('${banner}')`,
@@ -12,8 +12,11 @@ export const BannerContainer = styled(Container)(({ theme, banner }) => ({
   backgroundSize: "cover",
   minHeight: "500px",
   color: "white",
-  textAlign: "left",
-  backgroundAttachment:'fixed'
+  textAlign: "center",
+  backgroundAttachment: "fixed",
+  [theme.breakpoints.down("md")]: {
+    paddingTop: "150px",
+  },
 }));
 
 export const ShadowLayerBox = styled(Box)((_) => ({
@@ -50,15 +53,17 @@ export const SubmitSearch = styled(Button)((_) => ({
   borderRadius: 0,
 }));
 export const SiteHeading = styled(Typography)(({ theme }) => ({
-  fontSize: "80px",
+  fontSize: "4.5rem",
   marginBottom: "20px",
   [theme.breakpoints.down("md")]: {
-    fontSize: "40px",
+    fontSize: "3.5rem",
   },
 }));
 
 export const SiteDescription = styled(Typography)(({ theme }) => ({
   fontSize: "1.5rem",
-  fontWeight: "600",
-  fontFamily: "'Overlock', cursive",
+  fontWeight: "300",
+  [theme.breakpoints.down("md")]: {
+    fontSize: "1.2rem",
+  },
 }));

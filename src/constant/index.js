@@ -1,10 +1,47 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+
+const ABOUT_ITEMS = [{
+        thumbnail: 'http://surrey.minisisinc.com/surrey/images/aboutpage/Archives_Spring%201_crop.jpg',
+        heading: 'about0-heading',
+        description: 'about0-description',
+        title: 'about0-title',
+        street: 'about0-street',
+        city: 'about0-city',
+        phone: 'about0-phone',
+        site: 'about0-site',
+        email: 'about0-email',
+
+    },
+    {
+        thumbnail: 'http://surrey.minisisinc.com/surrey/images/aboutpage/Museum_summer%203.jpg',
+        heading: 'about1-heading',
+        description: 'about1-description',
+        title: 'about1-title',
+        street: 'about1-street',
+        city: 'about1-city',
+        phone: 'about1-phone',
+        site: 'about1-site',
+        email: 'about1-email',
+
+    },
+    {
+        thumbnail: 'http://surrey.minisisinc.com/surrey/images/aboutpage/Summer_Farmhouse%20M.jpg',
+        heading: 'about2-heading',
+        description: 'about2-description',
+        title: 'about2-title',
+        street: 'about2-street',
+        city: 'about2-city',
+        phone: 'about2-phone',
+        site: 'about2-site',
+        email: 'about2-email',
+    }
+]
 export const TEMPLATE = {
     baseURL: "",
     siteName: "OPAC Template",
     logo: "http://surrey.minisisinc.com/surrey/images/SAMOA-Banner.png",
-    banner: 'https://www.surrey.ca/sites/default/files/styles/21x9_1920w/public/2022-05/EdgewoodParkFlowers.jpg?h=56d0ca2e&itok=lPdhduvZ',
+    banner: 'https://images8.alphacoders.com/502/502079.jpg',
     heading: "heading",
     description: "description",
     pages: {
@@ -12,7 +49,8 @@ export const TEMPLATE = {
             about: {
                 heading: 'aboutHeading',
                 description: 'aboutDescription',
-                banner: 'https://www.teahub.io/photos/full/185-1852797_black-and-white-tree-wallpaper.png'
+                banner: 'https://www.teahub.io/photos/full/185-1852797_black-and-white-tree-wallpaper.png',
+                items: ABOUT_ITEMS
             },
             latest: {
                 heading: "latestHeading",

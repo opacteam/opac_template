@@ -50,9 +50,6 @@ const LatestSwiper = props => {
                         <CarouselText as="p">{item.title}</CarouselText>
                     </CarouselBox>
                 </SwiperSlide>))}
-
-            {/* <div className="latest-pagination"></div> */}
-
         </Swiper>
     )
 }

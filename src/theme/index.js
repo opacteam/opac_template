@@ -43,6 +43,7 @@ export const lightTheme = createTheme({
     },
     typography: {
         fontSize: 12,
+
         h1: {
             fontSize: "4.5rem",
         },

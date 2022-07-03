@@ -1,7 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Overlock:wght@400;700;900&display=swap");
+@font-face {
+    font-family: 'proxima-nova';
+    src: url('./assets/fonts/surrey.woff2') format('woff2')
+}
+
 body {
     margin: 0;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'proxima-nova', "Helvetica Neue", Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
