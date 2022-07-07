@@ -4,20 +4,17 @@ import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import PropTypes from "prop-types";
 export const SubHeading = styled(Typography)((_) => ({
   opacity: "1",
-  fontSize: "2rem",
+  fontSize: "3rem",
   textTransform: "uppercase",
-  textAlign: "left",
   fontWeight: "600",
 }));
 
 export const SubDescription = styled(Typography)(({ theme }) => ({
   marginTop: "25px",
-  lineHeight: "1.2",
-  letterSpacing: "1.1px",
-  textAlign: "left",
+  lineHeight: "1.5",
   fontWeight: "400",
   [theme.breakpoints.down("md")]: {
-    fontSize: ".8rem",
+    fontSize: "1rem",
   },
   [theme.breakpoints.only("md")]: {
     fontSize: "1rem",

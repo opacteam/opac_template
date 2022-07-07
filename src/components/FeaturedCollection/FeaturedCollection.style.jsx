@@ -6,9 +6,8 @@ export const FeatureCollectionContainer = styled(Container)(({ theme }) => ({
   minHeight: "600px",
   paddingTop: "120px",
   paddingBottom: "120px",
-  backgroundColor: theme.palette.secondary.dark,
+  backgroundColor: 'white',
   width: "100%",
-  color: "white",
  
 }));
 
@@ -18,7 +17,8 @@ export const FCCard = styled(Card)(({ theme }) => ({
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
-  backgroundColor: theme.palette.secondary.dark,
+  textAlign: "left",
+  backgroundColor: theme.palette.primary.light,
   [theme.breakpoints.down("md")]: {
     flexDirection: "column",
   },

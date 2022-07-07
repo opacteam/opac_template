@@ -23,8 +23,8 @@ const Home = () => {
       <Latest />
       <FeaturedCollection />
       <ExploreCollection />
-      <Timeline />
-      <Map />
+      {/* <Timeline /> */}
+      {/* <Map /> */}
       <Fab
         onClick={(_) => {
           dispatch(toggle());

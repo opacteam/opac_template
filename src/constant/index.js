@@ -182,12 +182,31 @@ export const TEMPLATE = {
                 title: "headerContact",
                 href: "/",
             }]
+        },
+        Footer: {
+            FooterLinks: [{
+                title: "headerHome",
+                href: "/"
+            }, {
+                title: "headerAbout",
+                href: "/",
+            }, {
+                title: "headerArchives",
+                href: "/",
+            }, {
+                title: "headerArtifacts",
+                href: "/",
+            }, {
+                title: "headerContact",
+                href: "/",
+            }]
         }
     },
     theme: {},
 
 
 }
+console.log(TEMPLATE)
 
 
 export const templateSlice = createSlice({
@@ -205,6 +224,8 @@ export const templateSlice = createSlice({
 
     }
 })
+
+
 
 
 export const { setBanner, setHeading, setTemplate } = templateSlice.actions;

@@ -32,12 +32,12 @@ export const lightTheme = createTheme({
         mode: 'light',
         primary: {
             light: '#a6c866',
-            main: '#6aa400',
+            main: '#538000',
             dark: '#2a4408',
         },
         secondary: {
             light: '#8e8e8e',
-            main: '#616161',
+            main: '#ffd766',
             dark: '#111111',
         },
     },

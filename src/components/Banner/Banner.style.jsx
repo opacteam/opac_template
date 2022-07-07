@@ -55,8 +55,9 @@ export const SubmitSearch = styled(Button)((_) => ({
 export const SiteHeading = styled(Typography)(({ theme }) => ({
   fontSize: "4.5rem",
   marginBottom: "20px",
+  fontWeight: "900",
   [theme.breakpoints.down("md")]: {
-    fontSize: "3.5rem",
+    fontSize: "2.5rem",
   },
 }));
 

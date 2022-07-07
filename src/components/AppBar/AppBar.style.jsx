@@ -16,7 +16,7 @@ export const AppbarRoot = styled(AppBar)(({ scroll, theme }) => ({
   transition: "all 300ms ease-out",
   height: "79px",
   justifyContent: "center",
-  opacity: scroll === 0 ? 1 : 0.9,
+  opacity: scroll === 0 ? 1 : 0.95,
 }));
 export const AppbarContainer = styled(Container)(() => ({
   display: "flex",

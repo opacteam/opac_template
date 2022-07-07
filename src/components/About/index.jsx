@@ -23,10 +23,10 @@ const About = () => {
   return (
     <AboutContainer maxWidth="false" banner={about.banner}>
       <Container maxWidth={"xl"}>
-        {" "}
         <Grid container>
           <Grid item span={12}>
             <SectionHeader
+              style={{ textAlign: "center" }}
               heading={about.heading}
               description={about.description}
             />
@@ -39,15 +39,8 @@ const About = () => {
           sx={{ width: "100%", marginTop: "32px" }}
         >
           {about.items.map((item, i) => (
-            <Grid
-              key={i + item.title}
-              item
-              sm={12}
-              md={12}
-              lg={4}
-              sx={{ width: "80%" }}
-            >
-              <AboutCard item={item} />
+            <Grid key={i + item.title} item sm={12} md={12} lg={12}>
+              <AboutCard item={item} position={i} />
             </Grid>
           ))}
         </Grid>
