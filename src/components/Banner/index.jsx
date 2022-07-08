@@ -52,6 +52,7 @@ const Banner = () => {
                 maxWidth: "800px",
                 margin: "80px auto",
                 textAlign: "center",
+                boxShadow: '2px 4px 2px 0px rgba(1,1,1,0.5)'
               }}
             >
               <InputBase

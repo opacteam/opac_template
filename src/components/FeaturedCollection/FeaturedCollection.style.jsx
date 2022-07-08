@@ -6,9 +6,8 @@ export const FeatureCollectionContainer = styled(Container)(({ theme }) => ({
   minHeight: "600px",
   paddingTop: "120px",
   paddingBottom: "120px",
-  backgroundColor: 'white',
+  backgroundColor: "white",
   width: "100%",
- 
 }));
 
 export const FCCard = styled(Card)(({ theme }) => ({
@@ -17,19 +16,22 @@ export const FCCard = styled(Card)(({ theme }) => ({
   flexDirection: "row",
   alignItems: "center",
   textAlign: "left",
+  border: "1px solid rgb(136,182,51)",
   backgroundColor: theme.palette.primary.light,
   [theme.breakpoints.down("md")]: {
     flexDirection: "column",
   },
   "&:hover": {
-    boxShadow: "0px 0px 13px 4px rgba(255,255,255,0.34)",
-    transform: "translateY(-1px)",
     transition: "all 0.2s",
   },
 }));
 
 export const FCCardMedia = styled(CardMedia)(({ theme }) => ({
   width: "50%",
+  "&:hover": {
+    
+    transition: "all 0.2s",
+  },
   [theme.breakpoints.down("md")]: {
     width: "100%",
   },

@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { EffectFlip, Navigation, Pagination } from "swiper";
+import SwiperCore, { EffectFlip, Navigation, Pagination,FreeMode  } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -17,12 +17,13 @@ const breakpoints = {
   },
 };
 
-SwiperCore.use([Navigation, Pagination]);
+SwiperCore.use([Navigation, Pagination, FreeMode ]);
 const Carousel = (props) => {
   let { children } = props;
 
   return (
     <Swiper
+      loop={true }
       speed={800}
       modules={[Navigation, Pagination]}
       slidesPerView={1}

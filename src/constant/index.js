@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 
 const ABOUT_ITEMS = [{
-        thumbnail: 'http://surrey.minisisinc.com/surrey/images/aboutpage/Archives_Spring%201_crop.jpg',
+        thumbnail: 'https://i.imgur.com/YX6yWsW.jpg',
         heading: 'about0-heading',
         description: 'about0-description',
         title: 'about0-title',
@@ -14,7 +14,7 @@ const ABOUT_ITEMS = [{
 
     },
     {
-        thumbnail: 'http://surrey.minisisinc.com/surrey/images/aboutpage/Museum_summer%203.jpg',
+        thumbnail: 'https://i.imgur.com/8sCXFcA.jpg',
         heading: 'about1-heading',
         description: 'about1-description',
         title: 'about1-title',
@@ -26,7 +26,7 @@ const ABOUT_ITEMS = [{
 
     },
     {
-        thumbnail: 'http://surrey.minisisinc.com/surrey/images/aboutpage/Summer_Farmhouse%20M.jpg',
+        thumbnail: 'https://i.imgur.com/oibPtv3.jpg',
         heading: 'about2-heading',
         description: 'about2-description',
         title: 'about2-title',
@@ -38,9 +38,9 @@ const ABOUT_ITEMS = [{
     }
 ]
 export const TEMPLATE = {
-    baseURL: "",
+    baseURL: "/",
     siteName: "OPAC Template",
-    logo: "http://surrey.minisisinc.com/surrey/images/SAMOA-Banner.png",
+    logo: "https://i.imgur.com/mmS5O3l.png",
     banner: 'https://images8.alphacoders.com/502/502079.jpg',
     heading: "heading",
     description: "description",
