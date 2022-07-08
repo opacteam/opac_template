@@ -39,17 +39,24 @@ function App() {
     <div className="App">
       <ThemeProvider theme={theme.darkTheme ? darkTheme : lightTheme}>
         <CssBaseline enableColorScheme />
-        <Layout>
+       
           <Router>
             <Suspense fallback={<Loading />}>
               <Routes>
                 {ROUTES.map(({ path, Component }, i) => (
-                  <Route key={i} path={path} element={<Component />} />
+                  <Route
+                    key={i}
+                    path={path}
+                    element={
+                      <Layout>
+                        <Component />
+                      </Layout>
+                    }
+                  />
                 ))}
               </Routes>
             </Suspense>
           </Router>
-        </Layout>
       </ThemeProvider>
     </div>
   );

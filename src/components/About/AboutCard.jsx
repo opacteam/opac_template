@@ -52,7 +52,7 @@ const AboutCard = ({ item, position }) => {
             component="img"
             height="300"
             image={item.thumbnail}
-            alt={item.title}
+            alt= {t(`about.${item.title}`)}
           />
           <CardContent>
             <Typography variant="h5" component="div">

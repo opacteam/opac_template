@@ -171,16 +171,16 @@ export const TEMPLATE = {
                 href: "/"
             }, {
                 title: "headerAbout",
-                href: "/",
+                href: "/about",
             }, {
                 title: "headerArchives",
-                href: "/",
+                href: "/archives",
             }, {
                 title: "headerArtifacts",
-                href: "/",
+                href: "/artifacts",
             }, {
                 title: "headerContact",
-                href: "/",
+                href: "/contact",
             }]
         },
         Footer: {
@@ -189,16 +189,16 @@ export const TEMPLATE = {
                 href: "/"
             }, {
                 title: "headerAbout",
-                href: "/",
+                href: "/about",
             }, {
                 title: "headerArchives",
-                href: "/",
+                href: "/archives",
             }, {
                 title: "headerArtifacts",
-                href: "/",
+                href: "/artifacts",
             }, {
                 title: "headerContact",
-                href: "/",
+                href: "/contact",
             }]
         }
     },

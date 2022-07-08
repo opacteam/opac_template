@@ -24,7 +24,7 @@ const FeaturedCollectionCard = (props) => {
       />
       <Box sx={{ display: "flex", flexDirection: "row" }}>
         <CardContent sx={{ flex: "0 1 auto", alignItems: "center" }}>
-          <Chip color="secondary" label={tag} sx={{ fontSize: "1rem" }} />
+          <Chip color="primary" label={tag} sx={{ fontSize: "1rem" }} />
           <SubDescription as="p">{title}</SubDescription>
           <Typography
             sx={{

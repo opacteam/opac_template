@@ -14,19 +14,11 @@ import About from "../../components/About";
 import FeaturedCollection from "../../components/FeaturedCollection";
 import Timeline from "../../components/Timeline";
 import Map from "../../components/Map";
-import {Link} from 'react-router-dom'
-const Home = () => {
+const Archives = () => {
   const dispatch = useDispatch();
   return (
     <>
-      <Banner />
-      <About />
-      <Latest />
-      <FeaturedCollection />
-      <ExploreCollection />
-      <Link to="/">Home</Link> | <Link to="about">About</Link>
-      {/* <Timeline /> */}
-      {/* <Map /> */}
+     
       <Fab
         onClick={(_) => {
           dispatch(toggle());
@@ -49,4 +41,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Archives;

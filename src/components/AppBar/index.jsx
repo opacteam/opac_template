@@ -9,18 +9,20 @@ import {
   AppbarRoot,
   AppbarLinkBox,
 } from "./AppBar.style";
-
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
+
+import {Link, useNavigate} from 'react-router-dom'
 const Appbar = () => {
   const TEMPLATE = useSelector((state) => state.template);
   const [isScroll, setIsScroll] = useState(0);
   const [isClicked, setIsClicked] = useState(false);
   const AppbarConstant = TEMPLATE.components.AppBar;
   const { t } = useTranslation();
-
   const pages = AppbarConstant.AppBarLinks;
   const { logo, siteName, baseURL } = TEMPLATE;
+  let navigate = useNavigate();
+
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY > 80;
@@ -56,11 +58,8 @@ const Appbar = () => {
               }}
             >
               {pages.map((page, i) => (
-                // <Button key={`${page}-${i}`} sx={{ my: 2, display: "block" }}>
-                //   {t(page.title)}
-                // </Button>
-                <AppbarLink>
-                  <Typography variant="a">{t(page.title)}</Typography>
+                <AppbarLink onClick={_=> navigate(page.href)} key={page.title}>
+                    <Typography variant="a">{t(page.title)}</Typography>
                 </AppbarLink>
               ))}
             </AppbarLinkBox>

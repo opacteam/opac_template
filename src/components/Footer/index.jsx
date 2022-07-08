@@ -59,6 +59,7 @@ const Footer = () => {
           <Grid item xs={12} md={5} container>
             {links.map((link, index) => (
               <Grid
+                key={link.href}
                 item
                 xs={6}
                 sx={{ marginBottom: "20px", textAlign: "left" }}
