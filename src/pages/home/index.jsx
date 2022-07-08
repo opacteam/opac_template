@@ -24,7 +24,6 @@ const Home = () => {
       <Latest />
       <FeaturedCollection />
       <ExploreCollection />
-      <Link to="/">Home</Link> | <Link to="about">About</Link>
       {/* <Timeline /> */}
       {/* <Map /> */}
       <Fab

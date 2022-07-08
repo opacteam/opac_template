@@ -16,13 +16,15 @@ import { AboutItemCard } from "./About.style";
 const AboutCardInfo = ({ item }) => {
   let { t } = useTranslation();
   return (
-    <div style={{ marginTop: "50px" , padding:"5px 10px"}}>
+    <div
+      style={{ margin: "40px  auto", padding: "5px 10px", maxWidth: "600px" }}
+    >
       <Typography variant="h3"> {t(`about.${item.title}`)}</Typography>
       <Typography component="p" sx={{ marginTop: "20px", fontSize: "1rem" }}>
         {" "}
         {t(`about.${item.description}`)}
       </Typography>
-      <Button variant="contained" sx={{ marginTop: "40px" }} size="large">
+      <Button variant="contained" sx={{ marginTop: "30px" }} size="large">
         {t("viewMore")}
       </Button>
     </div>
@@ -44,7 +46,7 @@ const AboutCard = ({ item, position }) => {
         item
         xs={12}
         md={6}
-        sx={{ margin: "30px auto" }}
+        sx={{ margin: "10px auto" }}
         order={{ xs: 1, sm: 1, md: position % 2 !== 0 ? 2 : 1 }}
       >
         <AboutItemCard raised={true}>
@@ -52,7 +54,7 @@ const AboutCard = ({ item, position }) => {
             component="img"
             height="300"
             image={item.thumbnail}
-            alt= {t(`about.${item.title}`)}
+            alt={t(`about.${item.heading}`)}
           />
           <CardContent>
             <Typography variant="h5" component="div">

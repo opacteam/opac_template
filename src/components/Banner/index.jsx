@@ -46,7 +46,6 @@ const Banner = () => {
             <Paper
               component="form"
               sx={{
-                p: "2px 4px",
                 display: "flex",
                 alignItems: "center",
                 width: "100%",
@@ -56,13 +55,25 @@ const Banner = () => {
               }}
             >
               <InputBase
+                style={{ height: "40px" }}
                 sx={{ ml: 1, flex: 1 }}
                 placeholder="Enter your search"
                 inputProps={{ "aria-label": "enter your search" }}
               />
-              <IconButton type="submit" sx={{ p: "10px" }} aria-label="search">
-                <SearchIcon />
-              </IconButton>
+              <Button
+                style={{
+                  height: "40px",
+                  borderTop: "0",
+                  borderTopLeftRadius: "0",
+
+                  borderBottomLeftRadius: "0",
+                }}
+                type="submit"
+                aria-label="search"
+                variant="contained"
+              >
+                Search
+              </Button>
             </Paper>
           </Grid>
         </Grid>

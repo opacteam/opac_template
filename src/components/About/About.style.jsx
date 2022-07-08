@@ -25,7 +25,7 @@ export const AboutContainer = styled(Container)(({ banner, theme }) => ({
 export const AboutItemCard = styled(Card)(({ theme }) => ({
   cursor: "pointer",
   width: "100%",
-  maxWidth: "500px",
+  maxWidth: "600px",
   margin: "0 auto",
   transition: "background .2s ease",
   "&:hover": {
