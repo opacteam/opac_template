@@ -162,6 +162,12 @@ export const TEMPLATE = {
                 description: "tlDescription"
             }
         },
+        archives: {
+            banner: 'https://i.imgur.com/VZzGs4y.jpg',
+            heading: "archivesHeading",
+            description: 'archivesDescription'
+        },
+        artifacts: {},
         summary: {},
         detail: {},
     },

@@ -14,11 +14,17 @@ import About from "../../components/About";
 import FeaturedCollection from "../../components/FeaturedCollection";
 import Timeline from "../../components/Timeline";
 import Map from "../../components/Map";
+import DBSearchBanner from "../../components/DBSearchBanner";
+import ArchivesSearch from "../../components/ArchivesSearch";
 const Archives = () => {
   const dispatch = useDispatch();
+  const TEMPLATE = useSelector((state) => state.template);
+  let archives = TEMPLATE.pages.archives;
   return (
     <>
-     
+      <DBSearchBanner database={archives}>
+        <ArchivesSearch />
+      </DBSearchBanner>
       <Fab
         onClick={(_) => {
           dispatch(toggle());

@@ -56,14 +56,14 @@ const Banner = () => {
               }}
             >
               <InputBase
-                style={{ height: "40px" }}
+                style={{ height: "55px", fontSize:'1.2rem' }}
                 sx={{ ml: 1, flex: 1 }}
                 placeholder="Enter your search"
                 inputProps={{ "aria-label": "enter your search" }}
               />
               <Button
                 style={{
-                  height: "40px",
+                  height: "55px",
                   borderTop: "0",
                   borderTopLeftRadius: "0",
 

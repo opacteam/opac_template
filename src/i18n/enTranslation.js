@@ -31,10 +31,16 @@ let aboutItems = {
     'about2-site': "",
     'about2-email': "",
 }
+
+let archivesTerms = {
+    'archivesHeading': "Search the Archives",
+    'archivesDescription': "The Surrey Archives is home to Surrey's history. Original photos, maps, manuscripts, city and community records and an extensive reference collection are waiting for you. Search for and view over 50,000 photos on SAMOA."
+}
 let en = {
     "home": "Home",
     "collections": "Collections",
     "poweredby": "Software powered by",
+    "searchIncludeKeyword": "Include the following types of records in the search: ",
     "headerHome": "Home",
     "headerAbout": "About",
     "headerArchives": "Archives",
@@ -53,6 +59,7 @@ let en = {
     "ecHeading": "Featured Collection",
     "ecDescription": "Featured Items from the Archives and Artifact Collections",
     "about": {...aboutItems },
+    ...archivesTerms,
 
 }
 
