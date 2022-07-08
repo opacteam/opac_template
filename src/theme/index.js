@@ -36,9 +36,9 @@ export const lightTheme = createTheme({
             dark: '#2a4408',
         },
         secondary: {
-            light: '#8e8e8e',
+            light: '#FBDF91',
             main: '#ffd766',
-            dark: '#111111',
+            dark: '##ffbc00',
         },
     },
     typography: {
@@ -108,4 +108,4 @@ export const darkTheme = createTheme({
 });
 
 
-export const DrawerWidth = 250;
+export const DrawerWidth = 250

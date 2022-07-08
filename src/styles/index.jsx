@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Typography, Button } from "@mui/material";
 import styled from "@emotion/styled";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import PropTypes from "prop-types";
@@ -49,6 +49,18 @@ export const ViewMore = ({ href, text }) => (
     </span>
   </ViewMoreText>
 );
+
+export const ExploreButton = styled(Button)(({ href, text }) => ({
+  padding: "10px 50px",
+  fontSize: "1.3rem",
+  fontWeight: "bold",
+  marginTop: "20px",
+}));
+
+ExploreButton.propTypes = {
+  href: PropTypes.string,
+  text: PropTypes.string,
+};
 
 ViewMore.propTypes = {
   href: PropTypes.string,

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { CarouselBox, CarouselText, LatestContainer } from "./Latest.style";
 import SectionHeader from "../SectionHeader";
-import { SubDescription, SubHeading, ViewMore } from "../../styles";
+import { SubDescription, SubHeading, ViewMore, ExploreButton } from "../../styles";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { Container, Typography } from "@mui/material";
@@ -37,6 +37,9 @@ const Latest = (props) => {
           heading={latest.heading}
           description={latest.description}
         />
+        <ExploreButton variant="contained" color="secondary">
+          {t("explore")}
+        </ExploreButton>
         <LatestSwiper latest={latest} windowDimensions={windowDimensions} />
       </Container>
     </LatestContainer>

@@ -1,5 +1,10 @@
 import React from "react";
-import { SubDescription, SubHeading, ViewMore } from "../../styles";
+import {
+  ExploreButton,
+  SubDescription,
+  SubHeading,
+  ViewMore,
+} from "../../styles";
 import { FeatureCollectionContainer } from "./FeaturedCollection.style";
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
@@ -21,12 +26,15 @@ const FeaturedCollection = () => {
   return (
     <FeatureCollectionContainer maxWidth={"false"}>
       <Container maxWidth="xl">
-      <SectionHeader heading={fc.heading} description={fc.description} />
-        <Grid container spacing={2}>
+        <SectionHeader heading={fc.heading} description={fc.description} />
+        <ExploreButton variant="contained" color="secondary" >
+          {t('explore')}
+        </ExploreButton>
+        <Grid container spacing={2} sx={{ marginTop: "80px" }}>
           {fc.items.map((item, i) => {
             let { title, author, tag, thumbnail } = item;
             return (
-              <Grid item sm={12} md={6} key={item.thumbnail + i}>
+              <Grid item sm={12} md={6} key={thumbnail + i}>
                 <FeaturedCollectionCard item={item} />
               </Grid>
             );

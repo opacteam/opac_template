@@ -13,7 +13,6 @@ export const FeatureCollectionContainer = styled(Container)(({ theme }) => ({
 
 export const FCCard = styled(Card)(({ theme }) => ({
   cursor: "pointer",
-  marginTop: "100px",
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
@@ -24,7 +23,7 @@ export const FCCard = styled(Card)(({ theme }) => ({
   },
   "&:hover": {
     boxShadow: "0px 0px 13px 4px rgba(255,255,255,0.34)",
-    transform: "translateY(-2px)",
+    transform: "translateY(-1px)",
     transition: "all 0.2s",
   },
 }));

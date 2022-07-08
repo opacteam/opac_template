@@ -12,33 +12,54 @@ import {
 import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
 import { AboutItemCard } from "./About.style";
+
+const AboutCardInfo = ({ item }) => {
+  let { t } = useTranslation();
+  return (
+    <div style={{ marginTop: "50px" , padding:"5px 10px"}}>
+      <Typography variant="h3"> {t(`about.${item.title}`)}</Typography>
+      <Typography component="p" sx={{ marginTop: "20px", fontSize: "1rem" }}>
+        {" "}
+        {t(`about.${item.description}`)}
+      </Typography>
+      <Button variant="contained" sx={{ marginTop: "40px" }} size="large">
+        {t("viewMore")}
+      </Button>
+    </div>
+  );
+};
 const AboutCard = ({ item, position }) => {
   let { t } = useTranslation();
   return (
     <Grid container xs={12}>
-      <Grid item xs={6} hidden={position % 2 !== 0}>
-        {t(`about.${item.description}`)}
+      <Grid
+        item
+        xs={12}
+        md={6}
+        order={{ xs: 2, sm: 2, md: position % 2 !== 0 ? 1 : 2 }}
+      >
+        <AboutCardInfo item={item} />
       </Grid>
-      <Grid item xs={6} sx={{ margin: "10px auto" }}>
+      <Grid
+        item
+        xs={12}
+        md={6}
+        sx={{ margin: "30px auto" }}
+        order={{ xs: 1, sm: 1, md: position % 2 !== 0 ? 2 : 1 }}
+      >
         <AboutItemCard raised={true}>
           <CardMedia
             component="img"
-            height="250"
+            height="300"
             image={item.thumbnail}
             alt={item.title}
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
+            <Typography variant="h5" component="div">
               {t(`about.${item.heading}`)}
-            </Typography>
-            <Typography variant="body1" color="text.secondary">
-              {t(`about.${item.title}`)}
             </Typography>
           </CardContent>
         </AboutItemCard>
-      </Grid>
-      <Grid item xs={6} hidden={position % 2 === 0}>
-        {t(`about.${item.description}`)}
       </Grid>
     </Grid>
   );
