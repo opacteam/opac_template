@@ -48,7 +48,7 @@ const DBSearchBanner = (props) => {
             style={{
               width: "100%",
               position: "absolute",
-              top: "calc(80vh - 27.5px)",
+              top: "calc(80vh - 45px)",
               left: 0,
               right: 0,
             }}
