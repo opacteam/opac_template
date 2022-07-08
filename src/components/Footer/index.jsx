@@ -78,16 +78,10 @@ const Footer = () => {
           </Grid>
 
           <Grid item xs={12} md={3} sx={{ textAlign: "left" }}>
-            <img
-              src="http://surrey.minisisinc.com/surrey/images/SurreyLogo-white.png"
-              alt="Surrey.ca"
-            />
+            <img src={'https://i.imgur.com/KikZE4d.png'} alt="Surrey.ca" />
 
             <p>{t(`poweredby`)}:</p>
-            <img
-              src="http://surrey.minisisinc.com/surrey/images/minisis_logo.png"
-              alt="MINISIS inc."
-            />
+            <img src={TEMPLATE.minisisLogo} alt="MINISIS inc." />
           </Grid>
         </Grid>
         <Divider flexItem sx={{ marginTop: "40px", marginBottom: "20px" }} />

@@ -41,6 +41,7 @@ export const TEMPLATE = {
     baseURL: "/",
     siteName: "OPAC Template",
     logo: "https://i.imgur.com/mmS5O3l.png",
+    minisisLogo: "https://i.imgur.com/6mi2JNZ.png",
     banner: 'https://images8.alphacoders.com/502/502079.jpg',
     heading: "heading",
     description: "description",
