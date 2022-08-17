@@ -1,32 +1,22 @@
-// import React from "react";
-// import ScrollHorizontal from 'react-scroll-horizontal';
-// function genData() {
-//   var data = [];
-//   var max = Math.random() * 20 + 1;
+import React from "react";
+import { TimelineContainer } from "./Timeline.style";
+import { Container } from "@mui/material";
+import { SubDescription, SubHeading, ViewMore } from "../../styles";
+import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
+import SectionHeader from "../SectionHeader";
 
-//   for (; --max > 0; ) {
-//     data.push({
-//       text: "Scroll Me " + max + "!!",
-//     });
-//   }
+const Timeline = () => {
+  const TEMPLATE = useSelector((state) => state.template);
+  const { timeline } = TEMPLATE.pages.home;
+  const { t } = useTranslation();
+  return (
+    <TimelineContainer maxWidth={"true"}>
+      <Container maxWidth={"xl"}>
+      <SectionHeader heading={timeline.heading} description={timeline.description} />
+      </Container>
+    </TimelineContainer>
+  );
+};
 
-//   return data;
-// }
-
-// const exampleItems = genData.map((item, i) => {
-//   return (
-//     <div key={i} className="tile">
-//       <h2>{item.text}</h2>
-//     </div>
-//   );
-// });
-
-// const index = () => {
-//   return    <div style={{ height: `22.7em`, width: `66%` }}>
-//   <ScrollHorizontal config={{ stiffness: 160, damping: 110 }}>
-//     {exampleItems}
-//   </ScrollHorizontal>
-// </div>;
-// };
-
-// export default index;
+export default Timeline;

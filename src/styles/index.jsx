@@ -1,60 +1,66 @@
-import { Typography } from "@mui/material";
+import { Typography, Button } from "@mui/material";
 import styled from "@emotion/styled";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import PropTypes from "prop-types";
 export const SubHeading = styled(Typography)((_) => ({
-  opacity: ".6",
-  color: "#111111",
-  fontSize: "13px",
+  opacity: "1",
+  fontSize: "3rem",
   textTransform: "uppercase",
-  textAlign: "left",
   fontWeight: "600",
 }));
 
 export const SubDescription = styled(Typography)(({ theme }) => ({
   marginTop: "25px",
-  color: "black",
-  lineHeight: "1.3",
-  letterSpacing: "1.5px",
-  textAlign: "left",
-  fontFamily: "'Overlock', cursive",
-  fontWeight: "600",
-
+  lineHeight: "1.5",
+  fontWeight: "400",
   [theme.breakpoints.down("md")]: {
-    fontSize: "1.8rem",
+    fontSize: "1rem",
   },
   [theme.breakpoints.only("md")]: {
-    fontSize: "2.5rem",
+    fontSize: "1rem",
   },
   [theme.breakpoints.up("md")]: {
-    fontSize: "2.2rem",
+    fontSize: "1.1rem",
   },
   [theme.breakpoints.up("lg")]: {
-    fontSize: "3rem",
+    fontSize: "1.4rem",
   },
 }));
 
+export const ViewMoreText = styled(Typography)(({ theme }) => ({
+  display: "flex",
+  justifyContent: "right",
+  textAlign: "right",
+  fontWeight: "600",
+  cursor: "pointer",
+  fontSize: "1.2rem",
+  marginTop: "20px",
+  color: "#538000",
+  textDecoration: "none",
+  "&:hover": {
+    textDecoration: "underline",
+  },
+}));
 export const ViewMore = ({ href, text }) => (
-  <Typography
-    style={{
-      display: "flex",
-      justifyContent: "right",
-      textAlign: "right",
-      fontWeight: "600",
-      cursor: "pointer",
-      fontSize: "1.2rem",
-      marginTop: "20px",
-     
-    }}
-    as="div"
-    onClick={(_) => (window.location = href)}
-  >
+  <ViewMoreText style={{}} as="a" href={href}>
     {text}
     <span style={{ display: "flex", alignItems: "center" }}>
       <ArrowRightAltIcon />
     </span>
-  </Typography>
+  </ViewMoreText>
 );
+
+export const ExploreButton = styled(Button)(({ href, text }) => ({
+  padding: "10px 50px",
+  fontSize: "1.3rem",
+  fontWeight: "bold",
+  marginTop: "20px",
+}));
+
+ExploreButton.propTypes = {
+  href: PropTypes.string,
+  text: PropTypes.string,
+};
 
 ViewMore.propTypes = {
   href: PropTypes.string,

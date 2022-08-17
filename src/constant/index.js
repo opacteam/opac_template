@@ -1,10 +1,48 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+
+const ABOUT_ITEMS = [{
+        thumbnail: 'https://i.imgur.com/YX6yWsW.jpg',
+        heading: 'about0-heading',
+        description: 'about0-description',
+        title: 'about0-title',
+        street: 'about0-street',
+        city: 'about0-city',
+        phone: 'about0-phone',
+        site: 'about0-site',
+        email: 'about0-email',
+
+    },
+    {
+        thumbnail: 'https://i.imgur.com/8sCXFcA.jpg',
+        heading: 'about1-heading',
+        description: 'about1-description',
+        title: 'about1-title',
+        street: 'about1-street',
+        city: 'about1-city',
+        phone: 'about1-phone',
+        site: 'about1-site',
+        email: 'about1-email',
+
+    },
+    {
+        thumbnail: 'https://i.imgur.com/oibPtv3.jpg',
+        heading: 'about2-heading',
+        description: 'about2-description',
+        title: 'about2-title',
+        street: 'about2-street',
+        city: 'about2-city',
+        phone: 'about2-phone',
+        site: 'about2-site',
+        email: 'about2-email',
+    }
+]
 export const TEMPLATE = {
-    baseURL: "",
+    baseURL: "/",
     siteName: "OPAC Template",
-    logo: "https://4m4you.com/wp-content/uploads/2020/06/logo-placeholder.png",
-    banner: 'https://ogsoftwaresolutions.com.my/wp-content/uploads/2019/08/library.jpeg',
+    logo: "https://i.imgur.com/mmS5O3l.png",
+    minisisLogo: "https://i.imgur.com/6mi2JNZ.png",
+    banner: 'https://images8.alphacoders.com/502/502079.jpg',
     heading: "heading",
     description: "description",
     pages: {
@@ -12,7 +50,8 @@ export const TEMPLATE = {
             about: {
                 heading: 'aboutHeading',
                 description: 'aboutDescription',
-                banner: 'https://www.teahub.io/photos/full/185-1852797_black-and-white-tree-wallpaper.png'
+                banner: 'https://www.teahub.io/photos/full/185-1852797_black-and-white-tree-wallpaper.png',
+                items: ABOUT_ITEMS
             },
             latest: {
                 heading: "latestHeading",
@@ -117,19 +156,56 @@ export const TEMPLATE = {
 
 
                 ]
+            },
+            timeline: {
+                heading: "tlHeading",
+                description: "tlDescription"
             }
         },
+        archives: {
+            banner: 'https://i.imgur.com/VZzGs4y.jpg',
+            heading: "archivesHeading",
+            description: 'archivesDescription'
+        },
+        artifacts: {},
         summary: {},
         detail: {},
     },
     components: {
         AppBar: {
             AppBarLinks: [{
-                title: "home",
+                title: "headerHome",
                 href: "/"
             }, {
-                title: "collections",
-                href: "/collections"
+                title: "headerAbout",
+                href: "/about",
+            }, {
+                title: "headerArchives",
+                href: "/archives",
+            }, {
+                title: "headerArtifacts",
+                href: "/artifacts",
+            }, {
+                title: "headerContact",
+                href: "/contact",
+            }]
+        },
+        Footer: {
+            FooterLinks: [{
+                title: "headerHome",
+                href: "/"
+            }, {
+                title: "headerAbout",
+                href: "/about",
+            }, {
+                title: "headerArchives",
+                href: "/archives",
+            }, {
+                title: "headerArtifacts",
+                href: "/artifacts",
+            }, {
+                title: "headerContact",
+                href: "/contact",
             }]
         }
     },
@@ -137,6 +213,7 @@ export const TEMPLATE = {
 
 
 }
+console.log(TEMPLATE)
 
 
 export const templateSlice = createSlice({
@@ -154,6 +231,8 @@ export const templateSlice = createSlice({
 
     }
 })
+
+
 
 
 export const { setBanner, setHeading, setTemplate } = templateSlice.actions;

@@ -1,23 +1,24 @@
-import React, { useState, useEffect, useRef } from 'react'
-import { CarouselBox, CarouselText, LatestContainer } from './Latest.style'
-
-import { SubDescription, SubHeading, ViewMore } from '../../styles';
-import { useTranslation } from 'react-i18next';
-import { useSelector } from 'react-redux';
-import { Container, Typography } from '@mui/material';
-import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
-import LatestSwiper from './LatestSwiper';
-
+import React, { useState, useEffect, useRef } from "react";
+import { CarouselBox, CarouselText, LatestContainer } from "./Latest.style";
+import SectionHeader from "../SectionHeader";
+import { SubDescription, SubHeading, ViewMore, ExploreButton } from "../../styles";
+import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
+import { Container, Typography } from "@mui/material";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import LatestSwiper from "./LatestSwiper";
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
   return {
     width,
-    height
+    height,
   };
 }
-const Latest = props => {
-  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+const Latest = (props) => {
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
   const TEMPLATE = useSelector((state) => state.template);
   const { latest } = TEMPLATE.pages.home;
   const { t } = useTranslation();
@@ -25,26 +26,24 @@ const Latest = props => {
     function handleResize() {
       setWindowDimensions(getWindowDimensions());
     }
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-
   return (
-    <LatestContainer maxWidth={'true'} dimension={windowDimensions} >
-      <Container maxWidth={'xl'}>
-        <SubHeading as="h2">{t(latest.heading)}</SubHeading>
-        <SubDescription as="p">{t(latest.description)}</SubDescription>
-        <ViewMore href="/" text={t('viewMore')} />
-        <LatestSwiper
-          latest={latest}
-          windowDimensions={windowDimensions} />
+    <LatestContainer maxWidth={"true"} dimension={windowDimensions}>
+      <Container maxWidth={"xl"}>
+        <SectionHeader
+          heading={latest.heading}
+          description={latest.description}
+        />
+        <ExploreButton variant="contained" color="secondary">
+          {t("explore")}
+        </ExploreButton>
+        <LatestSwiper latest={latest} windowDimensions={windowDimensions} />
       </Container>
-
     </LatestContainer>
   );
 };
-
-
 
 export default Latest;

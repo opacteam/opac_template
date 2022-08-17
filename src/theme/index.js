@@ -31,18 +31,19 @@ export const lightTheme = createTheme({
     palette: {
         mode: 'light',
         primary: {
-            light: '#fff7ff',
-            main: '#d1c4e9',
-            dark: '#a094b7',
+            light: '#a6c866',
+            main: '#538000',
+            dark: '#2a4408',
         },
         secondary: {
-            light: '#8e8e8e',
-            main: '#616161',
-            dark: '#111111',
+            light: '#FBDF91',
+            main: '#ffd766',
+            dark: '##ffbc00',
         },
     },
     typography: {
         fontSize: 12,
+
         h1: {
             fontSize: "4.5rem",
         },
@@ -71,10 +72,14 @@ export const darkTheme = createTheme({
     palette: {
         mode: 'dark',
         primary: {
-            main: Colors.primary,
+            light: '#484848',
+            main: '#212121',
+            dark: '#000000',
         },
         secondary: {
-            main: Colors.danger,
+            light: '#efdcd5',
+            main: '#bcaaa4',
+            dark: '#8c7b75',
         },
     },
     typography: {
@@ -103,4 +108,4 @@ export const darkTheme = createTheme({
 });
 
 
-export const DrawerWidth = 250;
+export const DrawerWidth = 250

@@ -7,9 +7,6 @@ const Layout = ({ children }) => {
     return (
         <>
             <AppBar />
-
-
-
             <LayoutMainBox>{children}</LayoutMainBox>
             <Footer />
         </>
