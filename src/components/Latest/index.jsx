@@ -40,7 +40,7 @@ const Latest = (props) => {
         <ExploreButton variant="contained" color="secondary">
           {t("explore")}
         </ExploreButton>
-        <LatestSwiper latest={latest} windowDimensions={windowDimensions} />
+        <LatestSwiper data={latest} windowDimensions={windowDimensions} />
       </Container>
     </LatestContainer>
   );

@@ -24,6 +24,17 @@ const Editor = () => {
   const enTranslation = useSelector((state) => state.enTranslation);
   const frTranslation = useSelector((state) => state.frTranslation);
   const dispatch = useDispatch();
+
+  const exportJSON = (data) => {
+    const jsonString = `data:text/json;chatset=utf-8,${encodeURIComponent(
+      JSON.stringify(data)
+    )}`;
+    const link = document.createElement("a");
+    link.href = jsonString;
+    link.download = "data.json";
+    link.click();
+  };
+
   return (
     <React.Fragment>
       <Drawer
@@ -63,7 +74,35 @@ const Editor = () => {
             />
           </FormGroup>
         </Box>
-
+        <Box>
+          <Button
+            type="button"
+            variant="contained"
+            onClick={(_) => exportJSON(TEMPLATE)}
+          >
+            Download Template Setting
+          </Button>
+        </Box>
+        <Box>
+          {" "}
+          <Button
+            type="button"
+            variant="contained"
+            onClick={(_) => exportJSON(enTranslation)}
+          >
+            Download English Translation
+          </Button>{" "}
+        </Box>
+        <Box>
+          {" "}
+          <Button
+            type="button"
+            variant="contained"
+            onClick={(_) => exportJSON(frTranslation)}
+          >
+            Download French Translation
+          </Button>
+        </Box>
         <JsonEditor
           value={TEMPLATE}
           onChange={(e) => dispatch(setTemplate(e))}
