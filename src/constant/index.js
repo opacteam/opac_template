@@ -1,13 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
-
-
-import { TEMPLATE } from '../config/opac_setting'
-
-
+import axios from 'axios';
+import { setLoad } from './load';
 
 export const templateSlice = createSlice({
     name: 'template',
-    initialState: TEMPLATE,
+    initialState: {},
     reducers: {
         setBanner: (state, banner) => ({...state, banner: banner }),
 
@@ -17,6 +14,7 @@ export const templateSlice = createSlice({
 
     }
 })
+
 
 
 

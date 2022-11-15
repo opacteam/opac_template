@@ -2,6 +2,7 @@ import { configureStore } from '@reduxjs/toolkit'
 import counterReducer from '../components/Counter/counterSlice';
 import themeReducer from '../theme/themeSlice';
 import templateReducer from '../constant';
+import initialLoadReducer from '../constant/load';
 import editorReducer from '../components/Editor/editorSlice';
 import languageReducer from '../i18n/languageSlice';
 import enTranslationReducer from '../i18n/enTranslation';
@@ -14,7 +15,8 @@ export const store = configureStore({
         editor: editorReducer,
         language: languageReducer,
         enTranslation: enTranslationReducer,
-        frTranslation: frTranslationReducer
+        frTranslation: frTranslationReducer,
+        initialLoad: initialLoadReducer
 
     },
 })

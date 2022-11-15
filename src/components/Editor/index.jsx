@@ -34,8 +34,8 @@ const Editor = () => {
     // link.href = jsonString;
     // link.download = "data.json";
     // link.click();
-    let api = "http://localhost:4444/upload";
-    console.log(data)
+    let api = "hhttps://opac-template-server.onrender.com/api/upload";
+    console.log(data);
     axios({
       method: "post",
       url: api,
@@ -90,7 +90,7 @@ const Editor = () => {
             variant="contained"
             onClick={(_) => exportJSON(TEMPLATE)}
           >
-            Download Template Setting
+            Save Site Settings
           </Button>
         </Box>
         <Box>
@@ -100,7 +100,7 @@ const Editor = () => {
             variant="contained"
             onClick={(_) => exportJSON(enTranslation)}
           >
-            Download English Translation
+            Save English Translation
           </Button>{" "}
         </Box>
         <Box>
@@ -110,7 +110,7 @@ const Editor = () => {
             variant="contained"
             onClick={(_) => exportJSON(frTranslation)}
           >
-            Download French Translation
+            Save French Translation
           </Button>
         </Box>
         <JsonEditor
