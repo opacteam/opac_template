@@ -18,6 +18,7 @@ import { JsonEditor } from "jsoneditor-react";
 import "jsoneditor-react/es/editor.min.css";
 import { updateFrTranslation } from "../../i18n/frTranslation";
 import { updateEnTranslation } from "../../i18n/enTranslation";
+import axios from "axios";
 const Editor = () => {
   const open = useSelector((state) => state.editor.open);
   const TEMPLATE = useSelector((state) => state.template);
@@ -26,13 +27,22 @@ const Editor = () => {
   const dispatch = useDispatch();
 
   const exportJSON = (data) => {
-    const jsonString = `data:text/json;chatset=utf-8,${encodeURIComponent(
-      JSON.stringify(data)
-    )}`;
-    const link = document.createElement("a");
-    link.href = jsonString;
-    link.download = "data.json";
-    link.click();
+    // const jsonString = `data:text/json;chatset=utf-8,${encodeURIComponent(
+    //   JSON.stringify(data)
+    // )}`;
+    // const link = document.createElement("a");
+    // link.href = jsonString;
+    // link.download = "data.json";
+    // link.click();
+    let api = "http://localhost:4444/upload";
+    console.log(data)
+    axios({
+      method: "post",
+      url: api,
+      data,
+    }).then((res) => {
+      console.log(res);
+    });
   };
 
   return (
