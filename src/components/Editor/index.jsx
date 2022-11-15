@@ -34,7 +34,7 @@ const Editor = () => {
     // link.href = jsonString;
     // link.download = "data.json";
     // link.click();
-    let api = "hhttps://opac-template-server.onrender.com/api/upload";
+    let api = "https://opac-template-server.onrender.com/api/upload";
     console.log(data);
     axios({
       method: "post",
