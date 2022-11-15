@@ -155,3 +155,11 @@ code {
 .editorDrawer .MuiPaper-root {
     width: 50vw !important;
 }
+
+.leaflet-container {
+    height: 500px
+}
+
+.markercluster-map {
+    height: 500px
+}

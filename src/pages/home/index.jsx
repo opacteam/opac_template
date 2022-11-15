@@ -25,7 +25,7 @@ const Home = () => {
       <FeaturedCollection />
       <ExploreCollection />
       {/* <Timeline /> */}
-      {/* <Map /> */}
+      <Map />
       <Fab
         onClick={(_) => {
           dispatch(toggle());
